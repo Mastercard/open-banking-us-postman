@@ -33,7 +33,7 @@ The following workflow runs the collection and ensures it can be used to consume
 
 ### Import or Fork the Collection
 
-1. [![](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/20642888-2d555951-b0b0-49a7-ac85-29eb776dac6c?action=collection%2Ffork&collection-url=entityId%3D20642888-2d555951-b0b0-49a7-ac85-29eb776dac6c%26entityType%3Dcollection%26workspaceId%3D21a43e78-b01c-4909-83ca-d465d8e0a7bc#?env%5BTest%20Drive%5D=W3sia2V5IjoicGFydG5lcklkIiwidmFsdWUiOiJ7Y2hhbmdlbWV9IiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQiLCJzZXNzaW9uVmFsdWUiOiIiLCJzZXNzaW9uSW5kZXgiOjB9LHsia2V5IjoicGFydG5lclNlY3JldCIsInZhbHVlIjoie2NoYW5nZW1lfSIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJzZWNyZXQiLCJzZXNzaW9uVmFsdWUiOiIiLCJzZXNzaW9uSW5kZXgiOjF9LHsia2V5IjoiYXBwS2V5IiwidmFsdWUiOiJ7Y2hhbmdlbWV9IiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InNlY3JldCIsInNlc3Npb25WYWx1ZSI6IiIsInNlc3Npb25JbmRleCI6Mn0seyJrZXkiOiJjdXN0b21lcklkIiwidmFsdWUiOiJ7Y2hhbmdlbWV9IiwiZW5hYmxlZCI6dHJ1ZSwic2Vzc2lvblZhbHVlIjoiIiwic2Vzc2lvbkluZGV4IjozfV0=)
+1. Click [![](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/20642888-2d555951-b0b0-49a7-ac85-29eb776dac6c?action=collection%2Ffork&collection-url=entityId%3D20642888-2d555951-b0b0-49a7-ac85-29eb776dac6c%26entityType%3Dcollection%26workspaceId%3D21a43e78-b01c-4909-83ca-d465d8e0a7bc#?env%5BTest%20Drive%5D=W3sia2V5IjoicGFydG5lcklkIiwidmFsdWUiOiJ7Y2hhbmdlbWV9IiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6ImRlZmF1bHQiLCJzZXNzaW9uVmFsdWUiOiIiLCJzZXNzaW9uSW5kZXgiOjB9LHsia2V5IjoicGFydG5lclNlY3JldCIsInZhbHVlIjoie2NoYW5nZW1lfSIsImVuYWJsZWQiOnRydWUsInR5cGUiOiJzZWNyZXQiLCJzZXNzaW9uVmFsdWUiOiIiLCJzZXNzaW9uSW5kZXgiOjF9LHsia2V5IjoiYXBwS2V5IiwidmFsdWUiOiJ7Y2hhbmdlbWV9IiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InNlY3JldCIsInNlc3Npb25WYWx1ZSI6IiIsInNlc3Npb25JbmRleCI6Mn0seyJrZXkiOiJjdXN0b21lcklkIiwidmFsdWUiOiJ7Y2hhbmdlbWV9IiwiZW5hYmxlZCI6dHJ1ZSwic2Vzc2lvblZhbHVlIjoiIiwic2Vzc2lvbkluZGV4IjozfV0=)
 2. Select the "Test Drive" environment and update `partnerId`, `partnerSecret`, `appKey` and `customerId` variables
 3. Click "Send" on individual requests or "Run collection"
 
@@ -75,9 +75,8 @@ The following workflow runs the collection and ensures it can be used to consume
 
 ## What's Next?
 
-Postman allows you to generate [code snippets](https://learning.postman.com/docs/sending-requests/generate-code-snippets/) you can use into your application.
-
-You may also be interested in generating an API client from the [Finicity API specification](https://github.com/FY-Dev-Relations/finicity-openapi).
+* Postman allows you to generate [code snippets](https://learning.postman.com/docs/sending-requests/generate-code-snippets/) you can use into your application
+* You may also be interested in generating an API client from the [Finicity API specification](https://github.com/FY-Dev-Relations/finicity-openapi)
 
 ## Guidelines
 
