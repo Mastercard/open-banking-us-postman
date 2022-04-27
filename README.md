@@ -25,7 +25,7 @@ The following workflow runs the collection and ensures it can be used to consume
 
 * Before running the collection, you need a **Customer ID**. For that, run [setup.sh](https://github.com/FY-Dev-Relations/finicity-openapi/blob/main/bin/setup.sh) and use the output of the script in the next sections. This script will call:
   * `addTestingCustomer`
-  * `generateConnectUrlV2` ([Finicity Connect](https://docs.finicity.com/)). Simply open the URL and add to your test customer all accounts from [`profile_09`](https://docs.finicity.com/test-the-apis/#test-the-apis-3).
+  * `generateConnectUrl` ([Finicity Connect](https://docs.finicity.com/)). Simply open the URL and add to your test customer all accounts from [`profile_09`](https://docs.finicity.com/test-the-apis/#test-the-apis-3).
   * `refreshCustomerAccounts`
 
 [![](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/connect-for-tests.png)](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/connect-for-tests.png?raw=true#gh-light-mode-only)
