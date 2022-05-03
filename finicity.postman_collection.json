@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "2dc2bfab-5949-4468-82de-8c4c7bbc140c",
 		"name": "Finicity APIs",
-		"description": "OpenAPI specification for Finicity APIs\n\n![](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/logo.png)\n\nContact Support:\n Name: Finicity\n Email: business.development@finicity.com",
+		"description": "OpenAPI specification for Finicity APIs\n\n![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/logo.png)\n\nContact Support:\n Name: Finicity\n Email: business.development@finicity.com",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [

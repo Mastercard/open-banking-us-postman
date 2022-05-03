@@ -1,6 +1,6 @@
 # finicity-postman
-[![](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/logo.png)](https://www.finicity.com/#gh-light-mode-only)
-[![](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/logo-dark.png)](https://www.finicity.com/#gh-dark-mode-only)
+[![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/logo.png)](https://www.finicity.com/#gh-light-mode-only)
+[![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/logo-dark.png)](https://www.finicity.com/#gh-dark-mode-only)
 
 ## Overview
 
@@ -10,7 +10,7 @@ The [Postman](https://www.postman.com/) collection for Finicity APIs (🇺🇸) 
 
 The following workflow runs the collection and ensures it can be used to consume and test the Finicity APIs:
 
-[![](https://github.com/FY-Dev-Relations/finicity-postman/actions/workflows/newman.yml/badge.svg)](https://github.com/FY-Dev-Relations/finicity-postman/actions/workflows/newman.yml)
+[![](https://github.com/Finicity-Mastercard/finicity-postman/actions/workflows/newman.yml/badge.svg)](https://github.com/Finicity-Mastercard/finicity-postman/actions/workflows/newman.yml)
 
 ## Collection
 [JSON ⤓](./finicity.postman_collection.json)
@@ -20,16 +20,16 @@ The following workflow runs the collection and ensures it can be used to consume
 
 * A [free Finicity account](https://signup.finicity.com/) is required to obtain your **Partner ID**, **Partner Secret** and **Finicity App Key**:
 
-[![](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/dashboard.png)](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/dashboard.png?raw=true#gh-light-mode-only)
-[![](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/dashboard-dark.png)](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/dashboard.png?raw=true#gh-dark-mode-only)
+[![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/dashboard.png)](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/dashboard.png?raw=true#gh-light-mode-only)
+[![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/dashboard-dark.png)](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/dashboard.png?raw=true#gh-dark-mode-only)
 
-* Before running the collection, you need a **Customer ID**. For that, run [setup.sh](https://github.com/FY-Dev-Relations/finicity-openapi/blob/main/bin/setup.sh) and use the output of the script in the next sections. This script will call:
+* Before running the collection, you need a **Customer ID**. For that, run [setup.sh](https://github.com/Finicity-Mastercard/finicity-openapi/blob/main/bin/setup.sh) and use the output of the script in the next sections. This script will call:
   * `addTestingCustomer`
   * `generateConnectUrl` ([Finicity Connect](https://docs.finicity.com/)). Simply open the URL and add to your test customer all accounts from [`profile_09`](https://docs.finicity.com/test-the-apis/#test-the-apis-3).
   * `refreshCustomerAccounts`
 
-[![](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/connect-for-tests.png)](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/connect-for-tests.png?raw=true#gh-light-mode-only)
-[![](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/connect-for-tests-dark.png)](https://raw.githubusercontent.com/FY-Dev-Relations/finicity-openapi/main/res/connect-for-tests.png?raw=true#gh-dark-mode-only)
+[![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/connect-for-tests.png)](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/connect-for-tests.png?raw=true#gh-light-mode-only)
+[![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/connect-for-tests-dark.png)](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/connect-for-tests.png?raw=true#gh-dark-mode-only)
 
 ### Import or Fork the Collection
 
@@ -67,7 +67,7 @@ The following workflow runs the collection and ensures it can be used to consume
 
 ### Run the Collection in GitHub
 
-1. [Fork this repository](https://github.com/FY-Dev-Relations/finicity-openapi/fork)
+1. [Fork this repository](https://github.com/Finicity-Mastercard/finicity-openapi/fork)
 2. Go to _Settings_ > _Secrets_ > _Actions_
 3. Create new repository secrets: `PARTNER_ID`, `PARTNER_SECRET`, `APP_KEY` and `CUSTOMER_ID`
 4. Enable workflows in the _Actions_ tab
@@ -76,8 +76,8 @@ The following workflow runs the collection and ensures it can be used to consume
 ## What's Next?
 
 * Postman allows you to generate [code snippets](https://learning.postman.com/docs/sending-requests/generate-code-snippets/) you can use into your application
-* You may also be interested in generating an API client from the [Finicity API specification](https://github.com/FY-Dev-Relations/finicity-openapi)
+* You may also be interested in generating an API client from the [Finicity API specification](https://github.com/Finicity-Mastercard/finicity-openapi)
 
 ## Guidelines
 
-The Finicity Postman Collection was created from the [Finicity API specification](https://github.com/FY-Dev-Relations/finicity-openapi) and must be maintained accordingly.
+The Finicity Postman Collection was created from the [Finicity API specification](https://github.com/Finicity-Mastercard/finicity-openapi) and must be maintained accordingly.
