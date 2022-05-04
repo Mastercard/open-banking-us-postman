@@ -63,7 +63,7 @@
 								"authentication"
 							]
 						},
-						"description": "Send Partner ID and Partner Secret to the Partner Authentication service to obtain a token for accessing Finicity APIs.\n* The token is valid for two hours and is required on all calls to the Finicity APIs\n* As a best practice, use a single token for all calls. Assign a timestamp for each token, and then check the current timestamp before making any calls. If the token is greater than 90 minutes, generate a new one.\n* ⚠️ After five failed attempts to authenticate, your account is locked. Contact [support@finicity.com](mailto:support@finicity.com) to get help resetting your account."
+						"description": "Send Partner ID and Partner Secret to the Partner Authentication service to obtain a token for accessing Finicity APIs.\n* The token is valid for two hours and is required on all calls to the Finicity APIs\n* As a best practice, use a single token for all calls. Assign a timestamp for each token, and then check the current timestamp before making any calls. If the token is greater than 90 minutes, generate a new one.\n* ⚠️ After five failed attempts to authenticate, your account will be locked. Contact [support@finicity.com](mailto:support@finicity.com) to get help resetting your account.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -258,7 +258,7 @@
 								"authentication"
 							]
 						},
-						"description": "Change the Partner Secret used to authenticate this partner.\n\nThe secret does not expire, but can be changed by calling this endpoint. A valid Partner Secret may contain upper and lowercase characters, numbers, and the characters !, @, #, $, %, &, *, _, -, +. It must include at least one number and at least one letter, and its length should be between 12 and 255 characters."
+						"description": "Change the Partner Secret used to authenticate this partner.\n\nThe secret does not expire, but can be changed by calling this endpoint. A valid Partner Secret may contain upper and lowercase characters, numbers, and the characters !, @, #, $, %, &, *, _, -, +. It must include at least one number and at least one letter, and its length should be between 12 and 255 characters.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -457,7 +457,7 @@
 								"testing"
 							]
 						},
-						"description": "Enroll a testing customer ([Test Drive](https://signup.finicity.com/) accounts).\n\nFor using Testing customers, register a test application with your systems engineer or account manager. Then use that testing `applicationId` when creating testing customers. Testing customers can only be assigned to testing OAuth applications and can only add accounts to Finbank OAuth for testing OAuth implementation as well as other Finbank testing institutions."
+						"description": "Enroll a testing customer ([Test Drive](https://signup.finicity.com/) accounts).\n\nFor using Testing customers, register a test application with your systems engineer or account manager. Then use that testing `applicationId` when creating testing customers. Testing customers can only be assigned to testing OAuth applications and can only add accounts to Finbank OAuth for testing OAuth implementation as well as other Finbank testing institutions.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -630,7 +630,7 @@
 								"active"
 							]
 						},
-						"description": "Enroll an active customer, which is the actual owner of one or more real-world accounts. This is a billable customer."
+						"description": "Enroll an active customer, which is the actual owner of one or more real-world accounts. This is a billable customer.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -851,7 +851,7 @@
 								}
 							]
 						},
-						"description": "Find all customers enrolled by the current partner, where the search text is found in the customer's username or any combination of `firstName` and `lastName` fields. If no search text is provided, all customers will be returned."
+						"description": "Find all customers enrolled by the current partner, where the search text is found in the customer's username or any combination of `firstName` and `lastName` fields. If no search text is provided, all customers will be returned.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -1075,7 +1075,7 @@
 								"application"
 							]
 						},
-						"description": "Retrieve a customer along with additional details about the OAuth application."
+						"description": "Retrieve a customer along with additional details about the OAuth application.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -1302,7 +1302,7 @@
 								"{{customerId}}"
 							]
 						},
-						"description": "Retrieve a customer by ID."
+						"description": "Retrieve a customer by ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -1539,7 +1539,7 @@
 								"{{customerId}}"
 							]
 						},
-						"description": "Modify an enrolled customer by ID."
+						"description": "Modify an enrolled customer by ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -1796,7 +1796,7 @@
 								"{{createdCustomerId}}"
 							]
 						},
-						"description": "Completely remove a customer from the system. This will remove the customer and all associated accounts and transactions.\n\n⚠️ Use this service carefully! It will not pause for confirmation before performing the operation!"
+						"description": "Completely remove a customer from the system. This will remove the customer and all associated accounts and transactions.\n\n⚠️ Use this service carefully! It will not pause for confirmation before performing the operation!\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -1995,7 +1995,7 @@
 								"generate"
 							]
 						},
-						"description": "Generate a Connect 2.0 URL link to add within your own applications.\n\nUse the `experience` parameter to call Connect (per session) in the body of the request. Configure the `experience` parameter to change the brand color, logo, icon, which credit decisioning report to generate when the Connect application completes, and more.\n\nNote: contact your Sales Account Team to set up the `experience` parameter.\n\n \nMVS Developers: You can pre-populate the consumer's SSN on the \"Find employment records\" page at the beginning of the MVS payroll app. Pass the SSN value for the consumer in the body of the request call."
+						"description": "Generate a Connect 2.0 URL link to add within your own applications.\n\nUse the `experience` parameter to call Connect (per session) in the body of the request. Configure the `experience` parameter to change the brand color, logo, icon, which credit decisioning report to generate when the Connect application completes, and more.\n\nNote: contact your Sales Account Team to set up the `experience` parameter.\n\n \nMVS Developers: You can pre-populate the consumer's SSN on the \"Find employment records\" page at the beginning of the MVS payroll app. Pass the SSN value for the consumer in the body of the request call.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -2165,7 +2165,7 @@
 								"lite"
 							]
 						},
-						"description": "Connect Lite is a variation of Connect Full (`POST /connect/v2/generate`), which has a limited set of features.\n* Sign in, user's credentials, and Multi-Factor Authentication (MFA)\n* No user account management\n\nThe Connect Web SDK isn't a requirement when using Connect lite. However, if you want to use the SDK events, routes, and user events, then you must integrate with the Connect Web SDK."
+						"description": "Connect Lite is a variation of Connect Full (`POST /connect/v2/generate`), which has a limited set of features.\n* Sign in, user's credentials, and Multi-Factor Authentication (MFA)\n* No user account management\n\nThe Connect Web SDK isn't a requirement when using Connect lite. However, if you want to use the SDK events, routes, and user events, then you must integrate with the Connect Web SDK.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -2339,7 +2339,7 @@
 								"fix"
 							]
 						},
-						"description": "Use the Connect Fix endpoint when the following conditions occur:\n* The connection to the user's financial institution is lost\n* The user's credentials were updated (for any number of reasons)\n* The user's MFA challenge has expired"
+						"description": "Use the Connect Fix endpoint when the following conditions occur:\n* The connection to the user's financial institution is lost\n* The user's credentials were updated (for any number of reasons)\n* The user's MFA challenge has expired\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -2548,7 +2548,7 @@
 								"email"
 							]
 						},
-						"description": "Same as Connect Full (`POST /connect/v2/generate`) but send a Connect email to a consumer."
+						"description": "Same as Connect Full (`POST /connect/v2/generate`) but send a Connect email to a consumer.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -2721,7 +2721,7 @@
 								"jointBorrower"
 							]
 						},
-						"description": "Same as Connect Full (`POST /connect/v2/generate`) but for joint borrowers.\n\nMVS prompts both the primary and joint borrower to enter each of their financial, payroll, and paystub information in the same Connect session."
+						"description": "Same as Connect Full (`POST /connect/v2/generate`) but for joint borrowers.\n\nMVS prompts both the primary and joint borrower to enter each of their financial, payroll, and paystub information in the same Connect session.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -2895,7 +2895,7 @@
 								"jointBorrower"
 							]
 						},
-						"description": "Same as Connect Joint Borrower (`POST /connect/v2/generate/jointBorrower`) but send a Connect email  to at least one of the joint borrower's email addresses. \n\nWhen the consumer opens the email, MVS prompts both the primary and joint borrower to enter each of their financial, payroll, and paystub information in the same Connect session."
+						"description": "Same as Connect Joint Borrower (`POST /connect/v2/generate/jointBorrower`) but send a Connect email  to at least one of the joint borrower's email addresses. \n\nWhen the consumer opens the email, MVS prompts both the primary and joint borrower to enter each of their financial, payroll, and paystub information in the same Connect session.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -3077,7 +3077,7 @@
 								"applications"
 							]
 						},
-						"description": "Register a new application to access financial institutions using OAuth connections."
+						"description": "Register a new application to access financial institutions using OAuth connections.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -3293,7 +3293,7 @@
 								"{{preAppId}}"
 							]
 						},
-						"description": "Update a registered application."
+						"description": "Update a registered application.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -3570,7 +3570,7 @@
 								}
 							]
 						},
-						"description": "Get the status of your application registration(s)."
+						"description": "Get the status of your application registration(s).\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -3924,7 +3924,7 @@
 								}
 							]
 						},
-						"description": "If you have multiple applications for a single client, and you want to register their applications to access financial institutions using OAuth connections, then use this API to assign applications to an existing customer."
+						"description": "If you have multiple applications for a single client, and you want to register their applications to access financial institutions using OAuth connections, then use this API to assign applications to an existing customer.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -4208,7 +4208,7 @@
 								}
 							]
 						},
-						"description": "The `institutionLoginId` parameter uses Finicity's internal FI mapping to move accounts from the current FI legacy connection to the new OAuth FI connection.\n\nThis API returns a list of accounts for the given institution login ID."
+						"description": "The `institutionLoginId` parameter uses Finicity's internal FI mapping to move accounts from the current FI legacy connection to the new OAuth FI connection.\n\nThis API returns a list of accounts for the given institution login ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -4485,7 +4485,7 @@
 								"consumer"
 							]
 						},
-						"description": "Create a consumer record associated with the given customer. A consumer persists as the owner of any reports that are generated, even after the original customer is deleted from the system.\n\nA consumer must be created for the given customer before calling any of the \"Generate Report\" services."
+						"description": "Create a consumer record associated with the given customer. A consumer persists as the owner of any reports that are generated, even after the original customer is deleted from the system.\n\nA consumer must be created for the given customer before calling any of the \"Generate Report\" services.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -4757,7 +4757,7 @@
 								"consumer"
 							]
 						},
-						"description": "Get the details of a consumer record by customer ID."
+						"description": "Get the details of a consumer record by customer ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -5012,7 +5012,7 @@
 								"{{consumerId}}"
 							]
 						},
-						"description": "Get the details of a consumer record by consumer ID."
+						"description": "Get the details of a consumer record by consumer ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -5277,7 +5277,7 @@
 								"{{consumerId}}"
 							]
 						},
-						"description": "Modify an existing consumer. All fields are required for a consumer record, but individual fields for this call are optional because fields that are not specified will be left unchanged."
+						"description": "Modify an existing consumer. All fields are required for a consumer record, but individual fields for this call are optional because fields that are not specified will be left unchanged.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -5518,7 +5518,7 @@
 								"accounts"
 							]
 						},
-						"description": "Get all accounts associated with the given institution login. All accounts returned are accessible by a single set of credentials on a single institution."
+						"description": "Get all accounts associated with the given institution login. All accounts returned are accessible by a single set of credentials on a single institution.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -5790,7 +5790,7 @@
 								"accounts"
 							]
 						},
-						"description": "Refresh account and transaction data for all accounts associated with a given `institutionLoginId` with a connection to the institution.\n\nClient apps are not permitted to automate calls to the \"Refresh\" services. Active accounts are automatically refreshed by Finicity once per day. Because many financial institutions only post transactions once per day, calling Refresh repeatedly is usually a waste of resources and is not recommended.\n\nApps may call \"Refresh\" services for a specific customer when there is a specific business case for the need of data that is up to date as of the moment. Please discuss with your account manager and systems engineer for further clarification.\n\nThe recommended timeout setting for this request is 120 seconds in order to receive a response. However you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete."
+						"description": "Refresh account and transaction data for all accounts associated with a given `institutionLoginId` with a connection to the institution.\n\nClient apps are not permitted to automate calls to the \"Refresh\" services. Active accounts are automatically refreshed by Finicity once per day. Because many financial institutions only post transactions once per day, calling Refresh repeatedly is usually a waste of resources and is not recommended.\n\nApps may call \"Refresh\" services for a specific customer when there is a specific business case for the need of data that is up to date as of the moment. Please discuss with your account manager and systems engineer for further clarification.\n\nThe recommended timeout setting for this request is 120 seconds in order to receive a response. However, you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -6054,7 +6054,7 @@
 								}
 							]
 						},
-						"description": "Remove from the Finicity system the set of accounts matching the institution login ID."
+						"description": "Remove from the Finicity system the set of accounts matching the institution login ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -6307,7 +6307,7 @@
 								"{{accountId}}"
 							]
 						},
-						"description": "Get a customer account by ID."
+						"description": "Get a customer account by ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -6567,7 +6567,7 @@
 								}
 							]
 						},
-						"description": "Remove the given account from the Finicity system."
+						"description": "Remove the given account from the Finicity system.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -6827,7 +6827,7 @@
 								}
 							]
 						},
-						"description": "Get all accounts owned by the given customer."
+						"description": "Get all accounts owned by the given customer.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -7093,7 +7093,7 @@
 								"accounts"
 							]
 						},
-						"description": "Refresh account and transaction data for all accounts associated with the  given `customerId` with a connection to the institution.\n\nClient apps are not permitted to automate calls to the \"Refresh\" services. Active accounts are automatically refreshed by Finicity once per day. Because many financial institutions only post transactions once per day, calling Refresh repeatedly is usually a waste of resources and is not recommended.\n\nApps may call \"Refresh\" services for a specific customer when there is a specific business case for the need of data that is up to date as of the moment. Please discuss with your account manager and systems engineer for further clarification.\n\nThe recommended timeout setting for this request is 120 seconds in order to receive a response. However you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete."
+						"description": "Refresh account and transaction data for all accounts associated with the  given `customerId` with a connection to the institution.\n\nClient apps are not permitted to automate calls to the \"Refresh\" services. Active accounts are automatically refreshed by Finicity once per day. Because many financial institutions only post transactions once per day, calling Refresh repeatedly is usually a waste of resources and is not recommended.\n\nApps may call \"Refresh\" services for a specific customer when there is a specific business case for the need of data that is up to date as of the moment. Please discuss with your account manager and systems engineer for further clarification.\n\nThe recommended timeout setting for this request is 120 seconds in order to receive a response. However, you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -7323,7 +7323,7 @@
 								"accounts"
 							]
 						},
-						"description": "Get all active accounts owned by the given customer at the given institution."
+						"description": "Get all active accounts owned by the given customer at the given institution.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -7596,7 +7596,7 @@
 								"historic"
 							]
 						},
-						"description": "Connect to the account's financial institution and load up to 24 months of historic transactions for the account. Length of history varies by institution.\n\nThis is a premium service. The billable event is a call to this service specifying a customer ID that has not been seen before by this service. (If this service is called multiple times with the same customer ID, to load transactions from multiple accounts, only one billable event has occurred.)\n\nThe recommended timeout setting for this request is 180 seconds in order to receive a response. However you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\nThe date range sent to the institution is calculated from the account's `createdDate`. This means that calling this service a second time for the same account normally will not add any new transactions for the account. For this reason, a second call to this service for a known account ID will usually return immediately.\n\nIn a few specific scenarios, it may be desirable to force a second connection to the institution for a known account ID. Some examples are:\n\n* The institution's policy has changed, making more transactions available\n* Finicity has now added a longer transaction history support for the institution\n* The first call encountered an error, and the resulting Aggregation Ticket has now been fixed by the Finicity Support Team\n\nIn these cases, the POST request can contain the parameter `force=true` in the request body to force the second connection."
+						"description": "Connect to the account's financial institution and load up to 24 months of historic transactions for the account. Length of history varies by institution.\n\nThis is a premium service. The billable event is a call to this service specifying a customer ID that has not been seen before by this service. (If this service is called multiple times with the same customer ID, to load transactions from multiple accounts, only one billable event has occurred.)\n\nThe recommended timeout setting for this request is 180 seconds in order to receive a response. However, you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\nThe date range sent to the institution is calculated from the account's `createdDate`. This means that calling this service a second time for the same account normally will not add any new transactions for the account. For this reason, a second call to this service for a known account ID will usually return immediately.\n\nIn a few specific scenarios, it may be desirable to force a second connection to the institution for a known account ID. Some examples are:\n\n* The institution's policy has changed, making more transactions available\n* Finicity has now added a longer transaction history support for the institution\n* The first call encountered an error, and the resulting Aggregation Ticket has now been fixed by the Finicity Support Team\n\nIn these cases, the POST request can contain the parameter `force=true` in the request body to force the second connection.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -7919,7 +7919,7 @@
 								"owner"
 							]
 						},
-						"description": "Retrieve the names and addresses of the account owner from a financial institution.\n\nNote: this is a premium service, billable per every successful API call.\n\nThis service retrieves account data from the institution. This usually returns quickly, but in some scenarios may take a few minutes to complete. In the event of a timeout condition, retry the call."
+						"description": "Retrieve the names and addresses of the account owner from a financial institution.\n\nNote: this is a premium service, billable per every successful API call.\n\nThis service retrieves account data from the institution. This usually returns quickly, but in some scenarios may take a few minutes to complete. In the event of a timeout condition, retry the call.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -8284,7 +8284,7 @@
 								"details"
 							]
 						},
-						"description": "Return the real account number and routing number details for an ACH payment.\n\nNote: this is a premium service, billable per every successful API call."
+						"description": "Return the real account number and routing number details for an ACH payment.\n\nNote: this is a premium service, billable per every successful API call.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -8543,7 +8543,7 @@
 								"live"
 							]
 						},
-						"description": "Retrieve the available and cleared account balances for a single account in real-time directly from a financial institution.\n\nNote: this is a premium service, billable per every successful API call."
+						"description": "Retrieve the available and cleared account balances for a single account in real-time directly from a financial institution.\n\nNote: this is a premium service, billable per every successful API call.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -8805,7 +8805,7 @@
 								"availableBalance"
 							]
 						},
-						"description": "Retrieve the latest cached available and cleared account balances for a customer. Since we update and store balances throughout the day, this is the most accurate balance information available when a connection to a financial institution is unavailable or when a faster response is needed.\n\nNote: this is a premium service, billable per every successful API call. Enrollment is required."
+						"description": "Retrieve the latest cached available and cleared account balances for a customer. Since we update and store balances throughout the day, this is the most accurate balance information available when a connection to a financial institution is unavailable or when a faster response is needed.\n\nNote: this is a premium service, billable per every successful API call. Enrollment is required.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -9133,7 +9133,7 @@
 								}
 							]
 						},
-						"description": "Search for certified financial institutions w/RSSD."
+						"description": "Search for certified financial institutions w/RSSD.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -9367,7 +9367,7 @@
 								}
 							]
 						},
-						"description": "Search for financial institutions."
+						"description": "Search for financial institutions.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -9598,7 +9598,7 @@
 								}
 							]
 						},
-						"description": "Search for financial institutions by certified product."
+						"description": "Search for financial institutions by certified product.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -9808,7 +9808,7 @@
 								"{{institutionId}}"
 							]
 						},
-						"description": "Get financial institution details by ID."
+						"description": "Get financial institution details by ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -10032,7 +10032,7 @@
 								"branding"
 							]
 						},
-						"description": "Return the branding information for a financial institution."
+						"description": "Return the branding information for a financial institution.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -10260,7 +10260,7 @@
 								"subscription"
 							]
 						},
-						"description": "Retrieve details of a subscription the partner has created to be alerted of changes to production status of financial institutions, products, and certification and decertification of products.\n\nNote: The webhook URL partners use to subscribe must be HTTPS."
+						"description": "Retrieve details of a subscription the partner has created to be alerted of changes to production status of financial institutions, products, and certification and decertification of products.\n\nNote: The webhook URL partners use to subscribe must be HTTPS.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -10521,7 +10521,7 @@
 								"payStatements"
 							]
 						},
-						"description": "Use this service to upload pay statements for a customer."
+						"description": "Use this service to upload pay statements for a customer.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -10794,7 +10794,7 @@
 								"{{assetId}}"
 							]
 						},
-						"description": "Retrieve a binary file for the given asset ID."
+						"description": "Retrieve a binary file for the given asset ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -11080,7 +11080,7 @@
 								}
 							]
 						},
-						"description": "Generate a Verification of Assets (VOA) report for all checking, savings, money market, and investment accounts for the given customer. This service retrieves up to twelve months of transaction history for each account and uses this information to generate the VOA report.\n\nThis is a premium service. The billing rate is the variable rate for Verification of Assets under the current subscription plan. The billable event is the successful generation of a VOA report.\n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request."
+						"description": "Generate a Verification of Assets (VOA) report for all checking, savings, money market, and investment accounts for the given customer. This service retrieves up to twelve months of transaction history for each account and uses this information to generate the VOA report.\n\nThis is a premium service. The billing rate is the variable rate for Verification of Assets under the current subscription plan. The billable event is the successful generation of a VOA report.\n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -11376,7 +11376,7 @@
 								}
 							]
 						},
-						"description": "Generate a Verification of Assets with Income (VOAI) report for all checking, savings, money market, and investment accounts for the given customer. This service retrieves up to 24 months of transaction history for each account and uses this information to generate the VOAI report. The report includes 1 - 6 months of all debit and credit transactions for asset verification. By default, the history is set to 61 days, however, you can change the transaction history in this section by setting the `fromDate` parameter. The report also includes up to 24 months of income credit transactions (ordered by account and confidence level) regardless of `fromDate` for income verification.\n\nThis is a premium service. The billable event is the successful generation of a VOAI report.\n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request."
+						"description": "Generate a Verification of Assets with Income (VOAI) report for all checking, savings, money market, and investment accounts for the given customer. This service retrieves up to 24 months of transaction history for each account and uses this information to generate the VOAI report. The report includes 1 - 6 months of all debit and credit transactions for asset verification. By default, the history is set to 61 days, however, you can change the transaction history in this section by setting the `fromDate` parameter. The report also includes up to 24 months of income credit transactions (ordered by account and confidence level) regardless of `fromDate` for income verification.\n\nThis is a premium service. The billable event is the successful generation of a VOAI report.\n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -11666,7 +11666,7 @@
 								}
 							]
 						},
-						"description": "Generate a Prequalification Report (`preQualVoa`) for all checking, savings, money market, and investment accounts for the given customer. This service retrieves account and owner information as well as the number of NSFs for any account that is a checking account for the customer. \n\nThis is a premium service. The billing rate is billed per report for the Prequalification report. \n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request."
+						"description": "Generate a Prequalification Report (`preQualVoa`) for all checking, savings, money market, and investment accounts for the given customer. This service retrieves account and owner information as well as the number of NSFs for any account that is a checking account for the customer. \n\nThis is a premium service. The billing rate is billed per report for the Prequalification report. \n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nIf no account of type checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -11940,7 +11940,7 @@
 								}
 							]
 						},
-						"description": "Generate Asset Summary (Non-CRA) Report (`assetSummary`) for all checking, savings, money market, and investment accounts for the given customer. This service retrieves account and owner information as well as the number of NSFs for any account that is a checking account for the customer. \n\nThis is a premium service. The billing rate is billed per report for the Asset Summary report. \n\nIf no account type of checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request."
+						"description": "Generate Asset Summary (Non-CRA) Report (`assetSummary`) for all checking, savings, money market, and investment accounts for the given customer. This service retrieves account and owner information as well as the number of NSFs for any account that is a checking account for the customer. \n\nThis is a premium service. The billing rate is billed per report for the Asset Summary report. \n\nIf no account type of checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -12219,7 +12219,7 @@
 								}
 							]
 						},
-						"description": "Generate a Verification of Income (VOI) report for all checking, savings, and money market accounts for the given customer. This service retrieves up to two years of transaction history for each account and uses this information to generate the VOI report.\n\nThis is a premium service. The billing rate is the variable rate for Verification of Income under the current subscription plan. The billable event is the successful generation of a VOI report.\n\nIf no account of type checking, savings, or money market is found, the service will return HTTP 400 Bad Request."
+						"description": "Generate a Verification of Income (VOI) report for all checking, savings, and money market accounts for the given customer. This service retrieves up to two years of transaction history for each account and uses this information to generate the VOI report.\n\nThis is a premium service. The billing rate is the variable rate for Verification of Income under the current subscription plan. The billable event is the successful generation of a VOI report.\n\nIf no account of type checking, savings, or money market is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -12493,7 +12493,7 @@
 								}
 							]
 						},
-						"description": "Premium Service: A billable event when the API response is successful. \n\nMVS Implementation Options: Direct API Integration.\n\nUsed as a complementary report to the VOIE-Payroll report. This report is used to fulfill the pre-close VOE requirements. It retrieves the customer's employment details and employment status through the payroll source without any income information. \n\nTo generate this report, pass the values from the customer `SSN`, `DOB`, and the `reportId` from the first VOIE-Payroll report generated after the Connect session."
+						"description": "Premium Service: A billable event when the API response is successful. \n\nMVS Implementation Options: Direct API Integration.\n\nUsed as a complementary report to the VOIE-Payroll report. This report is used to fulfill the pre-close VOE requirements. It retrieves the customer's employment details and employment status through the payroll source without any income information. \n\nTo generate this report, pass the values from the customer `SSN`, `DOB`, and the `reportId` from the first VOIE-Payroll report generated after the Connect session.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -12773,7 +12773,7 @@
 								}
 							]
 						},
-						"description": "Premium Service: A billable event when the API response is successful.\n\nMVS-Direct integration developers only.\n\nUsed as a complimentary report to the VOA with Income and VOIE - Paystub (with TXVerify) reports and used to fulfill the pre-close VOE requirements. \n\nRetrieve the latest credit transaction information from the borrower's connected bank accounts and groups them into income streams so that you can view their payment history to ensure a direct deport was made within the expected cadence. The report displays transaction descriptions without any dollar amounts so that income re-verification isn't necessary."
+						"description": "Premium Service: A billable event when the API response is successful.\n\nMVS-Direct integration developers only.\n\nUsed as a complimentary report to the VOA with Income and VOIE - Paystub (with TXVerify) reports and used to fulfill the pre-close VOE requirements. \n\nRetrieve the latest credit transaction information from the borrower's connected bank accounts and groups them into income streams so that you can view their payment history to ensure a direct deport was made within the expected cadence. The report displays transaction descriptions without any dollar amounts so that income re-verification isn't necessary.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -13063,7 +13063,7 @@
 								}
 							]
 						},
-						"description": "Generate Pay Statement Extraction Report for the given customer. This service accepts asset IDs of the stored pay statements to generate a Pay Statement Extraction Report. \n\nThis is a premium service. The billing rate is the variable rate for Pay Statement Extraction Report under the current subscription plan. The billable event is the successful generation of a Pay Statement Extraction Report."
+						"description": "Generate Pay Statement Extraction Report for the given customer. This service accepts asset IDs of the stored pay statements to generate a Pay Statement Extraction Report. \n\nThis is a premium service. The billing rate is the variable rate for Pay Statement Extraction Report under the current subscription plan. The billable event is the successful generation of a Pay Statement Extraction Report.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -13338,7 +13338,7 @@
 								}
 							]
 						},
-						"description": "Generate a VOIE - Paystub (with TXVerify) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given accounts. It then uses this information as well as the provided paystub(s), which are passed into the request body as asset IDs (generated using the Store Customer Pay Statement API) to generate the VOIE - Paystub (with TXVerify) report.\n\nNote: if you are using this endpoint to refresh the bank transactions, use the same asset ID from the first report. A new paystub is not required unless the paystub is too old for underwriting requirements. Using the same asset ID that was on the original report and the previously extracted details will be used to speed up report generation response time.\n\nThis is a premium service. The billing rate is the variable rate for VOIE TXVerify under the current subscription plan. The billable event is the successful generation of a VOIE TXVerify Report."
+						"description": "Generate a VOIE - Paystub (with TXVerify) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given accounts. It then uses this information as well as the provided paystub(s), which are passed into the request body as asset IDs (generated using the Store Customer Pay Statement API) to generate the VOIE - Paystub (with TXVerify) report.\n\nNote: if you are using this endpoint to refresh the bank transactions, use the same asset ID from the first report. A new paystub is not required unless the paystub is too old for underwriting requirements. Using the same asset ID that was on the original report and the previously extracted details will be used to speed up report generation response time.\n\nThis is a premium service. The billing rate is the variable rate for VOIE TXVerify under the current subscription plan. The billable event is the successful generation of a VOIE TXVerify Report.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -13617,7 +13617,7 @@
 								}
 							]
 						},
-						"description": "Generate a VOIE - Paystub report. This service uses the provided paystub(s), which are passed into the request body as asset IDs (generated using the \"Store Customer Pay Statement\" API) to generate the VOIE - Paystub report with digitized paystub details.\n\nThis is a premium service. The billing rate is the variable rate for VOIE - Paystub under the current subscription plan. The billable event is the successful generation of a VOIE - Paystub Report."
+						"description": "Generate a VOIE - Paystub report. This service uses the provided paystub(s), which are passed into the request body as asset IDs (generated using the \"Store Customer Pay Statement\" API) to generate the VOIE - Paystub report with digitized paystub details.\n\nThis is a premium service. The billing rate is the variable rate for VOIE - Paystub under the current subscription plan. The billable event is the successful generation of a VOIE - Paystub Report.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -13895,7 +13895,7 @@
 								}
 							]
 						},
-						"description": "The VOIE – Payroll report generates when the customer completes Connect. Lenders, who commonly use this report for pre-close verification employment check, can refresh this report by passing the consumer's SSN, DOB, and the `reportId` from the first VOIE – Payroll report they received.\n\nWe'll refresh this report and update any new pay histories since the first report generated, including borrower's employment status as active or not.\n\nNote: lenders can only refresh this report one time in a 60-day period starting from the date of the first report. Any further report refreshes will incur additional charges."
+						"description": "The VOIE – Payroll report generates when the customer completes Connect. Lenders, who commonly use this report for pre-close verification employment check, can refresh this report by passing the consumer's SSN, DOB, and the `reportId` from the first VOIE – Payroll report they received.\n\nWe'll refresh this report and update any new pay histories since the first report generated, including borrower's employment status as active or not.\n\nNote: lenders can only refresh this report one time in a 60-day period starting from the date of the first report. Any further report refreshes will incur additional charges.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -14211,7 +14211,7 @@
 								}
 							]
 						},
-						"description": "Retrieve the customer's bank statements in PDF format. Up to 24 months of history is available depending on the financial institution. Since this is a premium service, charges incur per each successful statement retrieved. \n\nOur list of [Supported Institutions](https://docs.finicity.com/institutions/) confirms that you can retrieve statements for the following account types: \n* Checking\n* Savings\n* Money market\n* CDs\n* Investments\n* Mortgage\n* Credit cards\n* Loans\n* Line of credit\n\nNote: setting the timeout to 180 seconds is recommended to allow enough time for a response."
+						"description": "Retrieve the customer's bank statements in PDF format. Up to 24 months of history is available depending on the financial institution. Since this is a premium service, charges incur per each successful statement retrieved. \n\nOur list of [Supported Institutions](https://docs.finicity.com/institutions/) confirms that you can retrieve statements for the following account types: \n* Checking\n* Savings\n* Money market\n* CDs\n* Investments\n* Mortgage\n* Credit cards\n* Loans\n* Line of credit\n\nNote: setting the timeout to 180 seconds is recommended to allow enough time for a response.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -14570,7 +14570,7 @@
 								}
 							]
 						},
-						"description": "Generate a Statement Report report for the given accounts under the given customer.\n\nThis is a premium service. A billable event will be created upon the successful generation of the Statement Report. \n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\")."
+						"description": "Generate a Statement Report report for the given accounts under the given customer.\n\nThis is a premium service. A billable event will be created upon the successful generation of the Statement Report. \n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -14907,7 +14907,7 @@
 								}
 							]
 						},
-						"description": "Get all transactions available for this customer within the given date range, across all accounts. This service supports paging and sorting by `transactionDate` (or `postedDate` if no transaction date is provided), with a maximum of 1000 transactions per request.\n\nStandard consumer aggregation provides up to 180 days of transactions prior to the date each account was added to the Finicity system. To access older transactions, you must first call the service Load Historic Transactions for Account.\n\nThere is no limit for the size of the window between `fromDate` and `toDate`, however, the maximum number of transactions returned on one page is 1000."
+						"description": "Get all transactions available for this customer within the given date range, across all accounts. This service supports paging and sorting by `transactionDate` (or `postedDate` if no transaction date is provided), with a maximum of 1000 transactions per request.\n\nStandard consumer aggregation provides up to 180 days of transactions prior to the date each account was added to the Finicity system. To access older transactions, you must first call the service Load Historic Transactions for Account.\n\nThere is no limit for the size of the window between `fromDate` and `toDate`, however, the maximum number of transactions returned on one page is 1000.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -15247,7 +15247,7 @@
 								}
 							]
 						},
-						"description": "Get details for the given transaction."
+						"description": "Get details for the given transaction.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -15569,7 +15569,7 @@
 								}
 							]
 						},
-						"description": "Get all transactions available for this customer account within the given date range. This service supports paging and sorting by `transactionDate` (or `postedDate` if no transaction date is provided), with a maximum of 1000 transactions per request.\n\nStandard consumer aggregation provides up to 180 days of transactions prior to the date each account was added to the Finicity system. To access older transactions, you must first call the Cash Flow Verification service Load Historic Transactions for Account.\n\nThere is no limit for the size of the window between `fromDate` and `toDate`, however, the maximum number of transactions returned on one page is 1000."
+						"description": "Get all transactions available for this customer account within the given date range. This service supports paging and sorting by `transactionDate` (or `postedDate` if no transaction date is provided), with a maximum of 1000 transactions per request.\n\nStandard consumer aggregation provides up to 180 days of transactions prior to the date each account was added to the Finicity system. To access older transactions, you must first call the Cash Flow Verification service Load Historic Transactions for Account.\n\nThere is no limit for the size of the window between `fromDate` and `toDate`, however, the maximum number of transactions returned on one page is 1000.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -15969,7 +15969,7 @@
 								}
 							]
 						},
-						"description": "Generate a Transaction Report for the given accounts under the given customer. This service retrieves up to 24 months of transaction history for the given customer. It then uses this information to generate the Transaction Report. \n\nThis is a premium service. A billable event will be created upon the successful generation of the Transactions Report. \n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nThere cannot be more than 24 months between `fromDate` and `toDate`."
+						"description": "Generate a Transaction Report for the given accounts under the given customer. This service retrieves up to 24 months of transaction history for the given customer. It then uses this information to generate the Transaction Report. \n\nThis is a premium service. A billable event will be created upon the successful generation of the Transactions Report. \n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nThere cannot be more than 24 months between `fromDate` and `toDate`.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -16303,7 +16303,7 @@
 								}
 							]
 						},
-						"description": "Generate a Cash Flow Report (Business) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given account. It then uses this information to generate the CFR report. A consumer is not required to generate this report.\n\nThis report is not provided under FCRA rules, and this report is not available in the Finicity Consumer Portal for the borrower to view.\n\nIf no account of type checking or savings is found, the service will return HTTP 400 Bad Request."
+						"description": "Generate a Cash Flow Report (Business) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given account. It then uses this information to generate the CFR report. A consumer is not required to generate this report.\n\nThis report is not provided under FCRA rules, and this report is not available in the Finicity Consumer Portal for the borrower to view.\n\nIf no account of type checking or savings is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -16599,7 +16599,7 @@
 								}
 							]
 						},
-						"description": "Generate a Cash Flow Report (Personal) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given account. It then uses this information to generate the CFR report.\n\nThis report is provided under FCRA rules, with Finicity acting as the CRA (Consumer Reporting Agency). If an individual account is included in the report - for example, with an individual acting as an personal guarantor on the loan - then this version of the report should be used. In case of an adverse action on the loan where the decision was based on this report, then the borrower can be referred to the [Finicity Consumer Portal](https://consumer.finicityreports.com) where they can view this report and submit a dispute if they feel any information in this report is inaccurate.\n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nIf no account of type checking or savings is found, the service will return HTTP 400 Bad Request."
+						"description": "Generate a Cash Flow Report (Personal) report for all checking and savings under the given customer. This service retrieves up to two years of transaction history for the given account. It then uses this information to generate the CFR report.\n\nThis report is provided under FCRA rules, with Finicity acting as the CRA (Consumer Reporting Agency). If an individual account is included in the report - for example, with an individual acting as an personal guarantor on the loan - then this version of the report should be used. In case of an adverse action on the loan where the decision was based on this report, then the borrower can be referred to the [Finicity Consumer Portal](https://consumer.finicityreports.com) where they can view this report and submit a dispute if they feel any information in this report is inaccurate.\n\nA report consumer must be created for the given customer before calling this API (see \"Consumers\").\n\nIf no account of type checking or savings is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -16886,7 +16886,7 @@
 								}
 							]
 						},
-						"description": "Get a report that has been generated by calling one of the \"Generate Report\" services.\n\nThe report's status field will contain `inProgress`, `failure`, or `success`. If the status shows `inProgress`, the client app should wait 20 seconds and then call this endpoint again."
+						"description": "Get a report that has been generated by calling one of the \"Generate Report\" services.\n\nThe report's status field will contain `inProgress`, `failure`, or `success`. If the status shows `inProgress`, the client app should wait 20 seconds and then call this endpoint again.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -17186,7 +17186,7 @@
 								}
 							]
 						},
-						"description": "Get all reports that have been generated by calling one of the \"Generate Report\" services for the given customer.\n\nThe report's status field will contain `inProgress`, `failure`, or `success`. If the status shows `inProgress`, the client app should wait 20 seconds and then call this endpoint again."
+						"description": "Get all reports that have been generated by calling one of the \"Generate Report\" services for the given customer.\n\nThe report's status field will contain `inProgress`, `failure`, or `success`. If the status shows `inProgress`, the client app should wait 20 seconds and then call this endpoint again.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -17495,7 +17495,7 @@
 								}
 							]
 						},
-						"description": "Get a report that has been generated by calling one of the \"Generate Report\" services.\n\nThe report's status field will contain `inProgress`, `failure`, or `success`. If the status shows `inProgress`, the client app should wait 20 seconds and then call this endpoint again."
+						"description": "Get a report that has been generated by calling one of the \"Generate Report\" services.\n\nThe report's status field will contain `inProgress`, `failure`, or `success`. If the status shows `inProgress`, the client app should wait 20 seconds and then call this endpoint again.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -17810,7 +17810,7 @@
 								}
 							]
 						},
-						"description": "Get a report that has been generated by calling one of the \"Generate Report\" services.\n\nThe report's status field will contain `inProgress`, `failure`, or `success`. If the status shows `inProgress`, the client app should wait 20 seconds and then call this endpoint again."
+						"description": "Get a report that has been generated by calling one of the \"Generate Report\" services.\n\nThe report's status field will contain `inProgress`, `failure`, or `success`. If the status shows `inProgress`, the client app should wait 20 seconds and then call this endpoint again.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -18182,7 +18182,7 @@
 								"loanDetails"
 							]
 						},
-						"description": "Return the loan payment details of the customer for a loan-type account.\n\nNote: this is a premium service, billable per every successful API call."
+						"description": "Return the loan payment details of the customer for a loan-type account.\n\nNote: this is a premium service, billable per every successful API call.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -18445,7 +18445,7 @@
 								"{{portfolioId}}"
 							]
 						},
-						"description": "Return a portfolio of most recently generated reports for each report type for the given customer. If there are multiple reports that were generated for a report type (VOA, VOI, etc), only the most recently generated report for the type will be returned.\n"
+						"description": "Return a portfolio of most recently generated reports for each report type for the given customer. If there are multiple reports that were generated for a report type (VOA, VOI, etc), only the most recently generated report for the type will be returned.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -18698,7 +18698,7 @@
 								"{{portfolioId}}"
 							]
 						},
-						"description": "Return a portfolio of most recently generated reports for each report type for a given consumer. If there are multiple reports that were generated for a report type (VOA, VOI, etc), only the most recently generated report for the type will be returned."
+						"description": "Return a portfolio of most recently generated reports for each report type for a given consumer. If there are multiple reports that were generated for a report type (VOA, VOI, etc), only the most recently generated report for the type will be returned.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -19030,7 +19030,7 @@
 								"txpush"
 							]
 						},
-						"description": "Register a client app's TxPush Listener to receive TxPush notifications related to the given account.\n\nEach call to this service will return two records, one with class account and one with class transaction. Account events are sent when values change in the account's fields (such as `balance` or `interestRate`). Transaction events are sent whenever a new transaction is posted for the account. For institutions that do not provide TxPush services, notifications are sent as soon as Finicity finds a new transaction or new account data through regular aggregation processes.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/)."
+						"description": "Register a client app's TxPush Listener to receive TxPush notifications related to the given account.\n\nEach call to this service will return two records, one with class account and one with class transaction. Account events are sent when values change in the account's fields (such as `balance` or `interestRate`). Transaction events are sent whenever a new transaction is posted for the account. For institutions that do not provide TxPush services, notifications are sent as soon as Finicity finds a new transaction or new account data through regular aggregation processes.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/).\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -19321,7 +19321,7 @@
 								"txpush"
 							]
 						},
-						"description": "Delete all TxPush subscriptions with their notifications for the given account. No more notifications will be sent for account or transaction events.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/)."
+						"description": "Delete all TxPush subscriptions with their notifications for the given account. No more notifications will be sent for account or transaction events.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/).\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -19593,7 +19593,7 @@
 								"transactions"
 							]
 						},
-						"description": "Inject a transaction into the transaction list for a testing account. This allows an app to trigger TxPush notifications for the account in order to test the app's TxPush Listener service. This causes the platform to send one transaction event and one account event (showing that the account balance has changed). This service is only supported for testing accounts.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/)."
+						"description": "Inject a transaction into the transaction list for a testing account. This allows an app to trigger TxPush notifications for the account in order to test the app's TxPush Listener service. This causes the platform to send one transaction event and one account event (showing that the account balance has changed). This service is only supported for testing accounts.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/).\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -19873,7 +19873,7 @@
 								"{{subscriptionId}}"
 							]
 						},
-						"description": "Delete a specific subscription to TxPush notifications for the given account. This could be individual deleting the account or transactions events. No more events will be sent for that specific subscription.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/)."
+						"description": "Delete a specific subscription to TxPush notifications for the given account. This could be individual deleting the account or transactions events. No more events will be sent for that specific subscription.\n\nFor additional details on this process, see [TxPush Listener Service](https://docs.finicity.com/txpush-listener-service/).\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -20177,7 +20177,7 @@
 								"analytics"
 							]
 						},
-						"description": "Generate a Consumer Attributes report for the given customer. The \"to\" and \"from\" date range is the last 12 months of consumer data, based on the date at which the report was generated.\n\nAn analytic ID is created and associated with the customer's ID. If you generate multiple Consumer Attributes reports for the same customer, then each report will have its own analytic ID."
+						"description": "Generate a Consumer Attributes report for the given customer. The \"to\" and \"from\" date range is the last 12 months of consumer data, based on the date at which the report was generated.\n\nAn analytic ID is created and associated with the customer's ID. If you generate multiple Consumer Attributes reports for the same customer, then each report will have its own analytic ID.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -20397,7 +20397,7 @@
 								"analytics"
 							]
 						},
-						"description": "Retrieve the list of all analytic IDs previously created for a customer using the \"Generate Consumer Attributes\" API."
+						"description": "Retrieve the list of all analytic IDs previously created for a customer using the \"Generate Consumer Attributes\" API.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
@@ -20625,7 +20625,7 @@
 								}
 							]
 						},
-						"description": "Retrieve a Consumer Attributes report for a customer.\n\nUse the analytic and customer IDs to retrieve 12 months of data attributes according to the \"to\" and \"from\" date range of the report at the time it was created. \n\nIf the current date is before the end of the calendar month, then the most recent month provides all available data up to the current date."
+						"description": "Retrieve a Consumer Attributes report for a customer.\n\nUse the analytic and customer IDs to retrieve 12 months of data attributes according to the \"to\" and \"from\" date range of the report at the time it was created. \n\nIf the current date is before the end of the calendar month, then the most recent month provides all available data up to the current date.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
