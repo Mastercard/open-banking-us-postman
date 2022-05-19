@@ -11676,7 +11676,7 @@
 					]
 				},
 				{
-					"name": "Generate Asset Summary Report",
+					"name": "Generate Prequalification (Non-CRA) Report",
 					"event": [
 						{
 							"listen": "test",
@@ -11744,7 +11744,7 @@
 								}
 							]
 						},
-						"description": "Generate Asset Summary (Non-CRA) Report (`assetSummary`) for all checking, savings, money market, and investment accounts for the given customer. This service retrieves account and owner information as well as the number of NSFs for any account that is a checking account for the customer. \n\nThis is a premium service. The billing rate is billed per report for the Asset Summary report. \n\nIf no account type of checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
+						"description": "Retrieve all checking, savings, money market, and investment accounts for a customer. The account, owner information, and the number of insufficient funds (NSFs) for checking accounts are also provided.\n\nThis is a premium service, billable per every successful API call.\n\nIf no account type of checking, savings, money market, or investment is found, the service will return HTTP 400 Bad Request.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
