@@ -10875,12 +10875,6 @@
 									"value": "https://finicity-test/webhook",
 									"description": "A Report Listener URL to receive notifications. The webhook must respond to the Finicity API with 2xx HTTP status code.",
 									"disabled": true
-								},
-								{
-									"key": "fromDate",
-									"value": "1607450357",
-									"description": "Without this parameter, the report defaults to 6 months if available. If included, the date should be within two years of the present day.",
-									"disabled": true
 								}
 							]
 						},
@@ -10899,7 +10893,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voa?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voa?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -10914,10 +10908,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -10953,7 +10943,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voa?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voa?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -10968,10 +10958,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -11007,7 +10993,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voa?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voa?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -11022,10 +11008,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -11061,7 +11043,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voa?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voa?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -11076,10 +11058,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -11171,12 +11149,6 @@
 									"value": "https://finicity-test/webhook",
 									"description": "A Report Listener URL to receive notifications. The webhook must respond to the Finicity API with 2xx HTTP status code.",
 									"disabled": true
-								},
-								{
-									"key": "fromDate",
-									"value": "1607450357",
-									"description": "Without this parameter, the report defaults to 61 days if available. This will limit the amount of credit and debit transactions included in the report up to the date specified, but will not limit the amount of income stream transactions. The income stream transactions are all included, up to 24 months, to help the lender and GSE's have the full history to validate income. If included, the date should be within two years of the present day.",
-									"disabled": true
 								}
 							]
 						},
@@ -11195,7 +11167,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voaHistory?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voaHistory?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -11210,10 +11182,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -11249,7 +11217,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voaHistory?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voaHistory?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -11264,10 +11232,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -11303,7 +11267,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voaHistory?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voaHistory?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -11318,10 +11282,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -11357,7 +11317,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voaHistory?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voaHistory?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -11372,10 +11332,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -12568,12 +12524,6 @@
 									"value": "https://finicity-test/webhook",
 									"description": "A Report Listener URL to receive notifications. The webhook must respond to the Finicity API with 2xx HTTP status code.",
 									"disabled": true
-								},
-								{
-									"key": "fromDate",
-									"value": "1607450357",
-									"description": "Limit the amount of credit transactions included in the report up to the given date, up to 120 days. Without this parameter, a report defaults to 120 days if available. Must be within 120 days of the present day.",
-									"disabled": true
 								}
 							]
 						},
@@ -12592,7 +12542,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voeTransactions?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voeTransactions?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -12607,10 +12557,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -12646,7 +12592,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voeTransactions?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voeTransactions?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -12661,10 +12607,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -12700,7 +12642,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voeTransactions?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voeTransactions?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -12715,10 +12657,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -12754,7 +12692,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voeTransactions?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/voeTransactions?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -12769,10 +12707,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -15754,12 +15688,6 @@
 									"disabled": true
 								},
 								{
-									"key": "fromDate",
-									"value": "1607450357",
-									"description": "Limit the amount of credit transactions included in the report up to the given date, up to 24 months. Without this parameter, a report defaults to 24 months if available. Must be within 2 years of the present day.",
-									"disabled": true
-								},
-								{
 									"key": "toDate",
 									"value": "1607450357",
 									"description": "(Required) A \"to\" date",
@@ -15788,7 +15716,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/transactions?callbackUrl=https://finicity-test/webhook&fromDate=1607450357&toDate=1607450357&includePending=true",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/transactions?callbackUrl=https://finicity-test/webhook&toDate=1607450357&includePending=true",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -15803,10 +15731,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										},
 										{
 											"key": "toDate",
@@ -15850,7 +15774,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/transactions?callbackUrl=https://finicity-test/webhook&fromDate=1607450357&toDate=1607450357&includePending=true",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/transactions?callbackUrl=https://finicity-test/webhook&toDate=1607450357&includePending=true",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -15865,10 +15789,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										},
 										{
 											"key": "toDate",
@@ -15912,7 +15832,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/transactions?callbackUrl=https://finicity-test/webhook&fromDate=1607450357&toDate=1607450357&includePending=true",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/transactions?callbackUrl=https://finicity-test/webhook&toDate=1607450357&includePending=true",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -15927,10 +15847,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										},
 										{
 											"key": "toDate",
@@ -15974,7 +15890,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/transactions?callbackUrl=https://finicity-test/webhook&fromDate=1607450357&toDate=1607450357&includePending=true",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/transactions?callbackUrl=https://finicity-test/webhook&toDate=1607450357&includePending=true",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -15989,10 +15905,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										},
 										{
 											"key": "toDate",
@@ -16098,12 +16010,6 @@
 									"value": "https://finicity-test/webhook",
 									"description": "A Report Listener URL to receive notifications. The webhook must respond to the Finicity API with 2xx HTTP status code.",
 									"disabled": true
-								},
-								{
-									"key": "fromDate",
-									"value": "1607450357",
-									"description": "Without this parameter, the report defaults to 6 months if available. If included, the date should be within two years of the present day.",
-									"disabled": true
 								}
 							]
 						},
@@ -16122,7 +16028,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowBusiness?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowBusiness?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -16137,10 +16043,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -16176,7 +16078,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowBusiness?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowBusiness?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -16191,10 +16093,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -16230,7 +16128,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowBusiness?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowBusiness?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -16245,10 +16143,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -16284,7 +16178,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowBusiness?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowBusiness?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -16299,10 +16193,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -16394,12 +16284,6 @@
 									"value": "https://finicity-test/webhook",
 									"description": "A Report Listener URL to receive notifications. The webhook must respond to the Finicity API with 2xx HTTP status code.",
 									"disabled": true
-								},
-								{
-									"key": "fromDate",
-									"value": "1607450357",
-									"description": "Without this parameter, the report defaults to 6 months if available. If included, the date should be within two years of the present day.",
-									"disabled": true
 								}
 							]
 						},
@@ -16418,7 +16302,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowPersonal?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowPersonal?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -16433,10 +16317,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -16472,7 +16352,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowPersonal?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowPersonal?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -16487,10 +16367,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -16526,7 +16402,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowPersonal?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowPersonal?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -16541,10 +16417,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
@@ -16580,7 +16452,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowPersonal?callbackUrl=https://finicity-test/webhook&fromDate=1607450357",
+									"raw": "{{baseUrl}}/decisioning/v2/customers/:customerId/cashFlowPersonal?callbackUrl=https://finicity-test/webhook",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -16595,10 +16467,6 @@
 										{
 											"key": "callbackUrl",
 											"value": "https://finicity-test/webhook"
-										},
-										{
-											"key": "fromDate",
-											"value": "1607450357"
 										}
 									],
 									"variable": [
