@@ -578,8 +578,8 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    // Not available from the Test Drive\r",
-									"    pm.expect(pm.response.code).to.equals(429)\r",
+									"    // HTTP 401: Not available from the Test Drive\r",
+									"    pm.expect(pm.response.code).not.to.equals(201)\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -10817,7 +10817,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -11091,7 +11091,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -11365,7 +11365,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -11639,7 +11639,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -11919,7 +11919,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -12192,7 +12192,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -12466,7 +12466,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -12740,7 +12740,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -13014,7 +13014,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -13293,7 +13293,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -13572,7 +13572,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -14247,7 +14247,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -15628,7 +15628,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -15952,7 +15952,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -16226,7 +16226,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([202, 429])\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([202, 429, 401])\r",
 									"})"
 								],
 								"type": "text/javascript"
