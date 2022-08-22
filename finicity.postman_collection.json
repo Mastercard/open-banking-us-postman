@@ -8805,7 +8805,7 @@
 								"availableBalance"
 							]
 						},
-						"description": "Retrieve the latest cached available and cleared account balances for a customer. Since we update and store balances throughout the day, this is the most accurate balance information available when a connection to a financial institution is unavailable or when a faster response is needed.\n\nNote: this is a premium service, billable per every successful API call. Enrollment is required.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
+						"description": "Retrieve the latest cached available and cleared account balances for a customer. Since we update and store balances throughout the day, this is the most accurate balance information available when a connection to a financial institution is unavailable or when a faster response is needed. Only deposit account types are supported: Checking, Savings, Money Market, and CD.\n\nNote: this is a premium service, billable per every successful API call. Enrollment is required.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
