@@ -13949,7 +13949,7 @@
 								}
 							]
 						},
-						"description": "Retrieve the customer's bank statements in PDF format. Up to 24 months of history is available depending on the financial institution. Since this is a premium service, charges incur per each successful statement retrieved. \n\nOur list of [Supported Institutions](https://docs.finicity.com/institutions/) confirms that you can retrieve statements for the following account types: \n* Checking\n* Savings\n* Money market\n* CDs\n* Investments\n* Mortgage\n* Credit cards\n* Loans\n* Line of credit\n\nNote: setting the timeout to 180 seconds is recommended to allow enough time for a response.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
+						"description": "Retrieve the customer's bank statements in PDF format. Up to 24 months of history is available depending on the financial institution. Since this is a premium service, charges incur per each successful statement retrieved. \n\nFor certified financial institutions, statements are available for the following account types: \n* Checking\n* Savings\n* Money market\n* CDs\n* Investments\n* Mortgage\n* Credit cards\n* Loans\n* Line of credit\n* Student Loans\n\nNote: setting the timeout to 180 seconds is recommended to allow enough time for a response.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 					},
 					"response": [
 						{
