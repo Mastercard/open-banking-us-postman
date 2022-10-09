@@ -578,7 +578,7 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    // HTTP 401: Not available from the Test Drive\r",
+									"    // HTTP 401: \"Invalid (Finicity-App-Key)\", not available from the Test Drive\r",
 									"    pm.expect(pm.response.code).not.to.equals(201)\r",
 									"})"
 								],
@@ -10225,28 +10225,7 @@
 							"const appKey = pm.environment.get(\"appKey\")",
 							"const customerId = pm.environment.get(\"customerId\")",
 							"const appToken = pm.globals.get(\"appToken\")",
-							"",
-							"const institutionId = pm.variables.get(\"institutionId\")",
-							"if (institutionId) {",
-							"    return",
-							"}",
-							"",
-							"console.log(\"Fetching institution ID ...\")",
-							"const options = {",
-							"    url:  baseUrl + \"/institution/v2/institutions\",",
-							"    method: 'GET',",
-							"    header: {",
-							"        \"Accept\": \"application/json\",",
-							"        \"Finicity-App-Key\": appKey,",
-							"        \"Finicity-App-Token\": appToken",
-							"    }",
-							"}",
-							"pm.sendRequest(options, function (err, response) {",
-							"    pm.expect(err).to.be.null",
-							"    pm.expect(response.code).to.equals(200)",
-							"    const institution = response.json().institutions[0]",
-							"    pm.variables.set(\"institutionId\", institution.id)",
-							"})"
+							"pm.variables.set(\"institutionId\", \"4222\") // Principal Financial - Retirement (Personal)"
 						]
 					}
 				},
@@ -14598,7 +14577,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/aggregation/v3/customers/{{customerId}}/transactions?fromDate=1000000000&toDate=1607450357&includePending=true",
+							"raw": "{{baseUrl}}/aggregation/v3/customers/{{customerId}}/transactions?fromDate=1000000000&includePending=true&toDate=1665309262",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -14614,11 +14593,6 @@
 									"key": "fromDate",
 									"value": "1000000000",
 									"description": "(Required) A \"from\" date"
-								},
-								{
-									"key": "toDate",
-									"value": "1607450357",
-									"description": "(Required) A \"to\" date"
 								},
 								{
 									"key": "start",
@@ -14642,6 +14616,11 @@
 									"key": "includePending",
 									"value": "true",
 									"description": "If pending transactions must be included"
+								},
+								{
+									"key": "toDate",
+									"value": "1665309262",
+									"description": "(Required) A \"to\" date"
 								}
 							]
 						},
@@ -15258,7 +15237,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/aggregation/v3/customers/{{customerId}}/accounts/{{accountId}}/transactions?fromDate=1000000000&toDate=1607450357&includePending=true",
+							"raw": "{{baseUrl}}/aggregation/v3/customers/{{customerId}}/accounts/{{accountId}}/transactions?fromDate=1000000000&includePending=true&toDate=1665309262",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -15276,11 +15255,6 @@
 									"key": "fromDate",
 									"value": "1000000000",
 									"description": "(Required) A \"from\" date"
-								},
-								{
-									"key": "toDate",
-									"value": "1607450357",
-									"description": "(Required) A \"to\" date"
 								},
 								{
 									"key": "start",
@@ -15304,6 +15278,11 @@
 									"key": "includePending",
 									"value": "true",
 									"description": "If pending transactions must be included"
+								},
+								{
+									"key": "toDate",
+									"value": "1665309262",
+									"description": "(Required) A \"to\" date"
 								}
 							]
 						},
@@ -17812,7 +17791,7 @@
 									"pm.sendRequest(options, function (err, response) {\r",
 									"    pm.expect(err).to.be.null\r",
 									"    pm.expect(response.code).to.equals(200)\r",
-									"    const account = response.json().accounts.filter(a => a.type === \"loan\")[0]\r",
+									"    const account = response.json().accounts[0]\r",
 									"    pm.variables.set(\"loanAccountId\", account.id)\r",
 									"})"
 								],
@@ -20541,7 +20520,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/analytics/ca360/v1/customers/:customerId/analytics/fcra",
+							"raw": "{{baseUrl}}/analytics/ca360/v1/customers/{{customerId}}/analytics/fcra",
 							"host": [
 								"{{baseUrl}}"
 							],
@@ -20550,16 +20529,9 @@
 								"ca360",
 								"v1",
 								"customers",
-								":customerId",
+								"{{customerId}}",
 								"analytics",
 								"fcra"
-							],
-							"variable": [
-								{
-									"key": "customerId",
-									"value": "1005061234",
-									"description": "(Required) A Finicity customer ID"
-								}
 							]
 						},
 						"description": "_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
