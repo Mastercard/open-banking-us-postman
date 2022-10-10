@@ -42,29 +42,8 @@ The following workflow runs the collection and ensures it can be used to consume
 
 1. Clone this repository
 2. Run `npx newman run finicity.postman_collection.json --env-var partnerId=*** --env-var partnerSecret=*** --env-var appKey=*** --env-var customerId=***`
-3. Expected result:
 
-```
-┌─────────────────────────┬────────────────────┬────────────────────┐
-│                         │           executed │             failed │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│              iterations │                  1 │                  0 │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│                requests │                 93 │                  0 │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│            test-scripts │                189 │                  0 │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│      prerequest-scripts │                129 │                  0 │
-├─────────────────────────┼────────────────────┼────────────────────┤
-│              assertions │                 75 │                  0 │
-├─────────────────────────┴────────────────────┴────────────────────┤
-│ total run duration: 51.7s                                         │
-├───────────────────────────────────────────────────────────────────┤
-│ total data received: 241.85kB (approx)                            │
-├───────────────────────────────────────────────────────────────────┤
-│ average response time: 478ms [min: 200ms, max: 3.9s, s.d.: 458ms] │
-└───────────────────────────────────────────────────────────────────┘
-```
+![](https://user-images.githubusercontent.com/3964455/194878975-1b8f3051-68d5-478e-95cb-bd8b15d84379.gif)
 
 ### Run the Collection in GitHub
 
