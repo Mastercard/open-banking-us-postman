@@ -20,8 +20,7 @@ The following workflow runs the collection and ensures it can be used to consume
 
 * A [free Finicity account](https://signup.finicity.com/) is required to obtain your **Partner ID**, **Partner Secret** and **Finicity App Key**:
 
-[![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/dashboard.png)](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/dashboard.png?raw=true#gh-light-mode-only)
-[![](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/dashboard-dark.png)](https://raw.githubusercontent.com/Finicity-Mastercard/finicity-openapi/main/res/dashboard.png?raw=true#gh-dark-mode-only)
+![](https://user-images.githubusercontent.com/3964455/195071182-7bba4ce8-9c1c-44ab-be96-4dea2b6af29b.gif)
 
 * Before running the collection, you need a **Customer ID**. For that, run [setup.sh](https://github.com/Finicity-Mastercard/finicity-openapi/blob/main/bin/setup.sh) and use the output of the script in the next sections. This script will call:
   * `addTestingCustomer`
