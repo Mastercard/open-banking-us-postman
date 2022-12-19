@@ -13212,7 +13212,8 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.equal(200)\r",
+									"    // HTTP 404: report not yet ready\r",
+									"    pm.expect([200, 404]).contain(pm.response.code)\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -13465,7 +13466,8 @@
 							"script": {
 								"exec": [
 									"pm.test(\"Check status code\", function () {\r",
-									"    pm.expect(pm.response.code).to.equal(200)\r",
+									"    // HTTP 404: report not yet ready\r",
+									"    pm.expect([200, 404]).contain(pm.response.code)\r",
 									"})"
 								],
 								"type": "text/javascript"
@@ -13722,7 +13724,6 @@
 							"const appKey = pm.environment.get(\"appKey\")",
 							"const customerId = pm.environment.get(\"customerId\")",
 							"const appToken = pm.globals.get(\"appToken\")",
-							"const accountId = pm.variables.get(\"accountId\")",
 							"",
 							"const portfolioId = pm.variables.get(\"portfolioId\")",
 							"const consumerId = pm.variables.get(\"consumerId\")",
