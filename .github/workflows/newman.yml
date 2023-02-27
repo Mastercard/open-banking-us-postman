@@ -20,3 +20,4 @@ jobs:
         with:
           envVar: '[{ "key": "appKey", "value": "${{ secrets.APP_KEY }}" }, { "key": "partnerId", "value": "${{ secrets.PARTNER_ID }}" }, { "key": "partnerSecret", "value": "${{ secrets.PARTNER_SECRET }}" }, { "key": "customerId", "value": "${{ secrets.CUSTOMER_ID }}" } ]'
           collection: finicity.postman_collection.json
+          folder: '[ "All APIs" ]'
