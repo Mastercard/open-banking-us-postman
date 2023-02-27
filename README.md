@@ -41,7 +41,7 @@ The following workflow runs the collection and ensures it can be used to consume
 ### Run the Collection on the Command Line
 
 1. Clone this repository
-2. Run `npx newman run finicity.postman_collection.json --env-var partnerId=*** --env-var partnerSecret=*** --env-var appKey=*** --env-var customerId=***`
+2. Run `npx newman run finicity.postman_collection.json --env-var partnerId=*** --env-var partnerSecret=*** --env-var appKey=*** --env-var customerId=*** --folder 'All APIs'`
 
 ![](https://user-images.githubusercontent.com/3964455/194878975-1b8f3051-68d5-478e-95cb-bd8b15d84379.gif)
 
