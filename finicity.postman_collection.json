@@ -316,15 +316,6 @@
 							"name": "Get Customer Accounts by Institution Login ID",
 							"event": [
 								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
 									"listen": "test",
 									"script": {
 										"exec": [
@@ -2425,15 +2416,6 @@
 									"})"
 								]
 							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
 						}
 					]
 				},
@@ -3563,15 +3545,6 @@
 											"    // \"Customer does not have any accounts associated with institutionLoginId = (1234)\"\r",
 											"    pm.expect(pm.response.code).to.equals(404)\r",
 											"})"
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											""
 										],
 										"type": "text/javascript"
 									}
@@ -4876,6 +4849,63 @@
 										],
 										"type": "text/javascript"
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"const baseUrl = pm.collectionVariables.get(\"baseUrl\")\r",
+											"const customerId = pm.environment.get(\"customerId\")\r",
+											"const appKey = pm.environment.get(\"appKey\")\r",
+											"const appToken = pm.globals.get(\"appToken\")\r",
+											"\r",
+											"// A consumer is needed for this API\r",
+											"createConsumer()\r",
+											"\t\r",
+											"function createConsumer() {\r",
+											"    const consumerExists = pm.globals.get(\"consumerExists\")\r",
+											"    if (consumerExists) {\r",
+											"        // A consumer was already created\r",
+											"        return\r",
+											"    }\r",
+											"\r",
+											"    console.log(\"Creating consumer ... \")\r",
+											"    const options = {\r",
+											"        url:  baseUrl + \"/decisioning/v1/customers/\" + customerId + \"/consumer\", \r",
+											"        method: 'POST',\r",
+											"        header: {\r",
+											"            \"Accept\": \"application/json\",\r",
+											"            \"Content-type\": \"application/json\",\r",
+											"            \"Finicity-App-Key\": appKey,\r",
+											"            \"Finicity-App-Token\": appToken\r",
+											"        },\r",
+											"        body: JSON.stringify({\r",
+											"            \"firstName\": \"Homer\",\r",
+											"            \"lastName\": \"Loanseeke\",\r",
+											"            \"address\": \"434 W Ascension Way\",\r",
+											"            \"city\": \"Murray\",\r",
+											"            \"state\": \"UT\",\r",
+											"            \"zip\": \"84123\",\r",
+											"            \"phone\": \"1-800-986-3343\",\r",
+											"            \"ssn\": \"999601111\",\r",
+											"            \"birthday\": {\r",
+											"                \"year\": 1970,\r",
+											"                \"month\": 7,\r",
+											"                \"dayOfMonth\": 4\r",
+											"            },\r",
+											"            \"email\": \"finicity@test.com\",\r",
+											"            \"suffix\": \"Mr\"\r",
+											"        })\r",
+											"    }\r",
+											"    pm.sendRequest(options, function (err, response) {\r",
+											"        pm.expect(err).to.be.null\r",
+											"        pm.expect(response.code).to.be.oneOf([200, 201, 409])\r",
+											"        pm.globals.set(\"consumerExists\", true)\r",
+											"    })\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
 							"request": {
@@ -5170,15 +5200,6 @@
 									"    pm.expect(response.code).to.equals(200)",
 									"    pm.variables.set(\"accountId\", response.json().accounts[0].id)",
 									"})"
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
 								]
 							}
 						}
@@ -5736,7 +5757,66 @@
 							]
 						}
 					],
-					"description": "Generate cash flow reports asynchronously"
+					"description": "Generate cash flow reports asynchronously",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// A consumer is needed for these APIs",
+									"createConsumer()",
+									"\t",
+									"function createConsumer() {",
+									"    const baseUrl = pm.collectionVariables.get(\"baseUrl\")",
+									"    const customerId = pm.environment.get(\"customerId\")",
+									"    const appKey = pm.environment.get(\"appKey\")",
+									"    const appToken = pm.globals.get(\"appToken\")",
+									"",
+									"    const consumerExists = pm.globals.get(\"consumerExists\")",
+									"    if (consumerExists) {",
+									"        // A consumer was already created",
+									"        return",
+									"    }",
+									"",
+									"    console.log(\"Creating consumer ... \")",
+									"    const options = {",
+									"        url:  baseUrl + \"/decisioning/v1/customers/\" + customerId + \"/consumer\", ",
+									"        method: 'POST',",
+									"        header: {",
+									"            \"Accept\": \"application/json\",",
+									"            \"Content-type\": \"application/json\",",
+									"            \"Finicity-App-Key\": appKey,",
+									"            \"Finicity-App-Token\": appToken",
+									"        },",
+									"        body: JSON.stringify({",
+									"            \"firstName\": \"Homer\",",
+									"            \"lastName\": \"Loanseeke\",",
+									"            \"address\": \"434 W Ascension Way\",",
+									"            \"city\": \"Murray\",",
+									"            \"state\": \"UT\",",
+									"            \"zip\": \"84123\",",
+									"            \"phone\": \"1-800-986-3343\",",
+									"            \"ssn\": \"999601111\",",
+									"            \"birthday\": {",
+									"                \"year\": 1970,",
+									"                \"month\": 7,",
+									"                \"dayOfMonth\": 4",
+									"            },",
+									"            \"email\": \"finicity@test.com\",",
+									"            \"suffix\": \"Mr\"",
+									"        })",
+									"    }",
+									"    pm.sendRequest(options, function (err, response) {",
+									"        pm.expect(err).to.be.null",
+									"        pm.expect(response.code).to.be.oneOf([200, 201, 409])",
+									"        pm.globals.set(\"consumerExists\", true)",
+									"    })",
+									"}"
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Connect 🔗",
@@ -10612,15 +10692,6 @@
 									"pm.variables.set(\"institutionId\", \"4222\") // Principal Financial - Retirement (Personal)"
 								]
 							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
 						}
 					]
 				},
@@ -10878,15 +10949,6 @@
 						{
 							"name": "Get Account Owner",
 							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
 								{
 									"listen": "test",
 									"script": {
@@ -12289,15 +12351,6 @@
 									"})"
 								]
 							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
 						}
 					]
 				},
@@ -12849,15 +12902,6 @@
 									"    pm.variables.set(\"portfolioId\", response.json().portfolioId)",
 									"    pm.variables.set(\"consumerId\", response.json().consumerId)",
 									"})"
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
 								]
 							}
 						}
@@ -14109,31 +14153,79 @@
 									"const customerId = pm.environment.get(\"customerId\")",
 									"const appToken = pm.globals.get(\"appToken\")",
 									"const accountId = pm.variables.get(\"accountId\")",
-									"",
 									"const reportId = pm.variables.get(\"reportId\")",
 									"const consumerId = pm.variables.get(\"consumerId\")",
-									"if (reportId && consumerId) {",
-									"    return",
+									"",
+									"createConsumer()",
+									"fetchReportIdAndConsumerId()",
+									"",
+									"function createConsumer() {",
+									"    const consumerExists = pm.globals.get(\"consumerExists\")",
+									"    if (consumerExists) {",
+									"        // A consumer was already created",
+									"        return",
+									"    }",
+									"",
+									"    console.log(\"Creating consumer ... \")",
+									"    const options = {",
+									"        url:  baseUrl + \"/decisioning/v1/customers/\" + customerId + \"/consumer\", ",
+									"        method: 'POST',",
+									"        header: {",
+									"            \"Accept\": \"application/json\",",
+									"            \"Content-type\": \"application/json\",",
+									"            \"Finicity-App-Key\": appKey,",
+									"            \"Finicity-App-Token\": appToken",
+									"        },",
+									"        body: JSON.stringify({",
+									"            \"firstName\": \"Homer\",",
+									"            \"lastName\": \"Loanseeke\",",
+									"            \"address\": \"434 W Ascension Way\",",
+									"            \"city\": \"Murray\",",
+									"            \"state\": \"UT\",",
+									"            \"zip\": \"84123\",",
+									"            \"phone\": \"1-800-986-3343\",",
+									"            \"ssn\": \"999601111\",",
+									"            \"birthday\": {",
+									"                \"year\": 1970,",
+									"                \"month\": 7,",
+									"                \"dayOfMonth\": 4",
+									"            },",
+									"            \"email\": \"finicity@test.com\",",
+									"            \"suffix\": \"Mr\"",
+									"        })",
+									"    }",
+									"    pm.sendRequest(options, function (err, response) {",
+									"        pm.expect(err).to.be.null",
+									"        pm.expect(response.code).to.be.oneOf([200, 201, 409])",
+									"        pm.globals.set(\"consumerExists\", true)",
+									"    })",
 									"}",
 									"",
-									"console.log(\"Fetching report ID and consumer ID ...\")",
-									"const options = {",
-									"    url:  baseUrl + \"/decisioning/v2/customers/\" + customerId + \"/voa\",",
-									"    method: 'POST',",
-									"    header: {",
-									"        \"Accept\": \"application/json\",",
-									"        \"Content-Type\": \"application/json\",",
-									"        \"Finicity-App-Key\": appKey,",
-									"        \"Finicity-App-Token\": appToken",
-									"    },",
-									"    body: JSON.stringify({})",
+									"function fetchReportIdAndConsumerId() {",
+									"    if (reportId && consumerId) {",
+									"        return",
+									"    }",
+									"    ",
+									"    console.log(\"Fetching report ID and consumer ID ...\")",
+									"    const options = {",
+									"        url:  baseUrl + \"/decisioning/v2/customers/\" + customerId + \"/voa\",",
+									"        method: 'POST',",
+									"        header: {",
+									"            \"Accept\": \"application/json\",",
+									"            \"Content-Type\": \"application/json\",",
+									"            \"Finicity-App-Key\": appKey,",
+									"            \"Finicity-App-Token\": appToken",
+									"        },",
+									"        body: JSON.stringify({})",
+									"    }",
+									"    pm.sendRequest(options, function (err, response) {",
+									"        pm.expect(err).to.be.null",
+									"        pm.expect(response.code).to.equals(202)",
+									"        pm.variables.set(\"reportId\", response.json().id)",
+									"        pm.variables.set(\"consumerId\", response.json().consumerId)",
+									"    })",
 									"}",
-									"pm.sendRequest(options, function (err, response) {",
-									"    pm.expect(err).to.be.null",
-									"    pm.expect(response.code).to.equals(202)",
-									"    pm.variables.set(\"reportId\", response.json().id)",
-									"    pm.variables.set(\"consumerId\", response.json().consumerId)",
-									"})"
+									""
 								]
 							}
 						},
@@ -15550,6 +15642,63 @@
 										],
 										"type": "text/javascript"
 									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											"// A consumer is needed for this API\r",
+											"createConsumer()\r",
+											"\t\r",
+											"function createConsumer() {\r",
+											"    const baseUrl = pm.collectionVariables.get(\"baseUrl\")\r",
+											"    const customerId = pm.environment.get(\"customerId\")\r",
+											"    const appKey = pm.environment.get(\"appKey\")\r",
+											"    const appToken = pm.globals.get(\"appToken\")\r",
+											"\r",
+											"    const consumerExists = pm.globals.get(\"consumerExists\")\r",
+											"    if (consumerExists) {\r",
+											"        // A consumer was already created\r",
+											"        return\r",
+											"    }\r",
+											"\r",
+											"    console.log(\"Creating consumer ... \")\r",
+											"    const options = {\r",
+											"        url:  baseUrl + \"/decisioning/v1/customers/\" + customerId + \"/consumer\", \r",
+											"        method: 'POST',\r",
+											"        header: {\r",
+											"            \"Accept\": \"application/json\",\r",
+											"            \"Content-type\": \"application/json\",\r",
+											"            \"Finicity-App-Key\": appKey,\r",
+											"            \"Finicity-App-Token\": appToken\r",
+											"        },\r",
+											"        body: JSON.stringify({\r",
+											"            \"firstName\": \"Homer\",\r",
+											"            \"lastName\": \"Loanseeke\",\r",
+											"            \"address\": \"434 W Ascension Way\",\r",
+											"            \"city\": \"Murray\",\r",
+											"            \"state\": \"UT\",\r",
+											"            \"zip\": \"84123\",\r",
+											"            \"phone\": \"1-800-986-3343\",\r",
+											"            \"ssn\": \"999601111\",\r",
+											"            \"birthday\": {\r",
+											"                \"year\": 1970,\r",
+											"                \"month\": 7,\r",
+											"                \"dayOfMonth\": 4\r",
+											"            },\r",
+											"            \"email\": \"finicity@test.com\",\r",
+											"            \"suffix\": \"Mr\"\r",
+											"        })\r",
+											"    }\r",
+											"    pm.sendRequest(options, function (err, response) {\r",
+											"        pm.expect(err).to.be.null\r",
+											"        pm.expect(response.code).to.be.oneOf([200, 201, 409])\r",
+											"        pm.globals.set(\"consumerExists\", true)\r",
+											"    })\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
 							"request": {
@@ -15864,15 +16013,6 @@
 						{
 							"name": "Subscribe to TxPush Notifications",
 							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
 								{
 									"listen": "test",
 									"script": {
@@ -17016,15 +17156,6 @@
 									"})"
 								]
 							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
 						}
 					]
 				},
@@ -18128,7 +18259,66 @@
 							]
 						}
 					],
-					"description": "Generate asset reports asynchronously"
+					"description": "Generate asset reports asynchronously",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"// A consumer is needed for some of these APIs",
+									"createConsumer()",
+									"",
+									"function createConsumer() {",
+									"    const baseUrl = pm.collectionVariables.get(\"baseUrl\")",
+									"    const customerId = pm.environment.get(\"customerId\")",
+									"    const appKey = pm.environment.get(\"appKey\")",
+									"    const appToken = pm.globals.get(\"appToken\")",
+									"",
+									"    const consumerExists = pm.globals.get(\"consumerExists\")",
+									"    if (consumerExists) {",
+									"        // A consumer was already created",
+									"        return",
+									"    }",
+									"",
+									"    console.log(\"Creating consumer ... \")",
+									"    const options = {",
+									"        url:  baseUrl + \"/decisioning/v1/customers/\" + customerId + \"/consumer\", ",
+									"        method: 'POST',",
+									"        header: {",
+									"            \"Accept\": \"application/json\",",
+									"            \"Content-type\": \"application/json\",",
+									"            \"Finicity-App-Key\": appKey,",
+									"            \"Finicity-App-Token\": appToken",
+									"        },",
+									"        body: JSON.stringify({",
+									"            \"firstName\": \"Homer\",",
+									"            \"lastName\": \"Loanseeke\",",
+									"            \"address\": \"434 W Ascension Way\",",
+									"            \"city\": \"Murray\",",
+									"            \"state\": \"UT\",",
+									"            \"zip\": \"84123\",",
+									"            \"phone\": \"1-800-986-3343\",",
+									"            \"ssn\": \"999601111\",",
+									"            \"birthday\": {",
+									"                \"year\": 1970,",
+									"                \"month\": 7,",
+									"                \"dayOfMonth\": 4",
+									"            },",
+									"            \"email\": \"finicity@test.com\",",
+									"            \"suffix\": \"Mr\"",
+									"        })",
+									"    }",
+									"    pm.sendRequest(options, function (err, response) {",
+									"        pm.expect(err).to.be.null",
+									"        pm.expect(response.code).to.be.oneOf([200, 201, 409])",
+									"        pm.globals.set(\"consumerExists\", true)",
+									"    })",
+									"}"
+								]
+							}
+						}
+					]
 				},
 				{
 					"name": "Verify Income and Employment",
@@ -20073,40 +20263,79 @@
 									"const customerId = pm.environment.get(\"customerId\")",
 									"const appToken = pm.globals.get(\"appToken\")",
 									"",
-									"const assetId = pm.variables.get(\"assetId\")",
-									"if (assetId) {",
-									"    return",
-									"}",
+									"// A consumer is needed for some of these APIs",
+									"createConsumer()",
+									"createAsset()",
 									"",
-									"console.log(\"Creating asset ID ...\")",
-									"const options = {",
-									"    url:  baseUrl + \"/aggregation/v1/customers/\"+ customerId + \"/payStatements\",",
-									"    method: 'POST',",
-									"    header: {",
-									"        \"Accept\": \"application/json\",",
-									"        \"Content-Type\": \"application/json\",",
-									"        \"Finicity-App-Key\": appKey,",
-									"        \"Finicity-App-Token\": appToken",
-									"    },",
-									"    body: JSON.stringify({",
-									"        \"label\": \"lastPayPeriod\",",
-									"        \"statement\": \"VGhpcyBtdXN0IGJlIGFuIGltYWdl\"",
+									"function createAsset() {",
+									"    const assetId = pm.variables.get(\"assetId\")",
+									"    if (assetId) {",
+									"        return",
+									"    }",
+									"",
+									"    console.log(\"Creating asset ID ...\")",
+									"    const options = {",
+									"        url:  baseUrl + \"/aggregation/v1/customers/\"+ customerId + \"/payStatements\",",
+									"        method: 'POST',",
+									"        header: {",
+									"            \"Accept\": \"application/json\",",
+									"            \"Content-Type\": \"application/json\",",
+									"            \"Finicity-App-Key\": appKey,",
+									"            \"Finicity-App-Token\": appToken",
+									"        },",
+									"        body: JSON.stringify({",
+									"            \"label\": \"lastPayPeriod\",",
+									"            \"statement\": \"VGhpcyBtdXN0IGJlIGFuIGltYWdl\"",
+									"        })",
+									"    }",
+									"    pm.sendRequest(options, function (err, response) {",
+									"        pm.expect(err).to.be.null",
+									"        pm.expect(response.code).to.equals(200)",
+									"        pm.variables.set(\"assetId\", response.json().assetId)",
 									"    })",
 									"}",
-									"pm.sendRequest(options, function (err, response) {",
-									"    pm.expect(err).to.be.null",
-									"    pm.expect(response.code).to.equals(200)",
-									"    pm.variables.set(\"assetId\", response.json().assetId)",
-									"})"
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"type": "text/javascript",
-								"exec": [
-									""
+									"",
+									"function createConsumer() {",
+									"    const consumerExists = pm.globals.get(\"consumerExists\")",
+									"    if (consumerExists) {",
+									"        // A consumer was already created",
+									"        return",
+									"    }",
+									"",
+									"    console.log(\"Creating consumer ... \")",
+									"    const options = {",
+									"        url:  baseUrl + \"/decisioning/v1/customers/\" + customerId + \"/consumer\", ",
+									"        method: 'POST',",
+									"        header: {",
+									"            \"Accept\": \"application/json\",",
+									"            \"Content-type\": \"application/json\",",
+									"            \"Finicity-App-Key\": appKey,",
+									"            \"Finicity-App-Token\": appToken",
+									"        },",
+									"        body: JSON.stringify({",
+									"            \"firstName\": \"Homer\",",
+									"            \"lastName\": \"Loanseeke\",",
+									"            \"address\": \"434 W Ascension Way\",",
+									"            \"city\": \"Murray\",",
+									"            \"state\": \"UT\",",
+									"            \"zip\": \"84123\",",
+									"            \"phone\": \"1-800-986-3343\",",
+									"            \"ssn\": \"999601111\",",
+									"            \"birthday\": {",
+									"                \"year\": 1970,",
+									"                \"month\": 7,",
+									"                \"dayOfMonth\": 4",
+									"            },",
+									"            \"email\": \"finicity@test.com\",",
+									"            \"suffix\": \"Mr\"",
+									"        })",
+									"    }",
+									"    pm.sendRequest(options, function (err, response) {",
+									"        pm.expect(err).to.be.null",
+									"        pm.expect(response.code).to.be.oneOf([200, 201, 409])",
+									"        pm.globals.set(\"consumerExists\", true)",
+									"    })",
+									"}"
 								]
 							}
 						}
@@ -20161,58 +20390,7 @@
 							"    expiryDate.setMinutes(expiryDate.getMinutes() + 90)",
 							"    pm.globals.set(\"appToken\", tokenValue)",
 							"    pm.globals.set(\"appTokenExpiry\", expiryDate)",
-							"",
-							"    // Create a consumer for report generation APIs",
-							"    createConsumer()",
-							"})",
-							"",
-							"",
-							"function createConsumer() {",
-							"    const baseUrl = pm.collectionVariables.get(\"baseUrl\")",
-							"    const customerId = pm.environment.get(\"customerId\")",
-							"    const appKey = pm.environment.get(\"appKey\")",
-							"    const appToken = pm.globals.get(\"appToken\")",
-							"",
-							"    const consumerExists = pm.globals.get(\"consumerExists\")",
-							"    if (consumerExists) {",
-							"        // A consumer was already created",
-							"        return",
-							"    }",
-							"",
-							"    console.log(\"Creating consumer ... \")",
-							"    const options = {",
-							"        url:  baseUrl + \"/decisioning/v1/customers/\" + customerId + \"/consumer\", ",
-							"        method: 'POST',",
-							"        header: {",
-							"            \"Accept\": \"application/json\",",
-							"            \"Content-type\": \"application/json\",",
-							"            \"Finicity-App-Key\": appKey,",
-							"            \"Finicity-App-Token\": appToken",
-							"        },",
-							"        body: JSON.stringify({",
-							"            \"firstName\": \"Homer\",",
-							"            \"lastName\": \"Loanseeke\",",
-							"            \"address\": \"434 W Ascension Way\",",
-							"            \"city\": \"Murray\",",
-							"            \"state\": \"UT\",",
-							"            \"zip\": \"84123\",",
-							"            \"phone\": \"1-800-986-3343\",",
-							"            \"ssn\": \"999601111\",",
-							"            \"birthday\": {",
-							"                \"year\": 1970,",
-							"                \"month\": 7,",
-							"                \"dayOfMonth\": 4",
-							"            },",
-							"            \"email\": \"finicity@test.com\",",
-							"            \"suffix\": \"Mr\"",
-							"        })",
-							"    }",
-							"    pm.sendRequest(options, function (err, response) {",
-							"        pm.expect(err).to.be.null",
-							"        pm.expect(response.code).to.be.oneOf([200, 201, 409])",
-							"        pm.globals.set(\"consumerExists\", true)",
-							"    })",
-							"}"
+							"})"
 						]
 					}
 				},
@@ -20226,26 +20404,6 @@
 					}
 				}
 			]
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
 		}
 	],
 	"variable": [
