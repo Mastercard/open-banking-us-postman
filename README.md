@@ -22,7 +22,7 @@ The following workflow runs the collection and ensures it can be used to consume
 
 ![project](https://user-images.githubusercontent.com/3964455/221236073-5661d083-0a04-4d46-9710-3c0c8c9e9a6a.gif)
 
-* Before running the collection, you need a **Customer ID**. For that, follow [Welcome Your First Customer](https://mstr.cd/3Z5de0Q) or run [setup.sh](https://github.com/Mastercard/finicity-openapi/blob/main/bin/setup.sh) and use the output of the script in the next sections. This script will call:
+* Before running the collection, you need a **Customer ID**. For that, follow [Welcome Your First Customer](https://mstr.cd/3Z5de0Q) or run the [setup script](https://github.com/Mastercard/finicity-openapi/blob/main/bin/). This script will call:
   * `addTestingCustomer`
   * `generateConnectUrl` ([Finicity Connect](https://docs.finicity.com/)). Simply open the URL, search for "FinBank Profiles - A" and add to your test customer all accounts from [`profile_03`](https://docs.finicity.com/test-the-apis/#bank-account-profiles).
   * `refreshCustomerAccounts`
