@@ -2179,7 +2179,7 @@
 										"accounts"
 									]
 								},
-								"description": "Refresh account and transaction data for all accounts associated with the  given `customerId` with a connection to the institution.\n\nClient apps are not permitted to automate calls to the Refresh services. Active accounts are automatically refreshed by Finicity once per day. Because many financial institutions only post transactions once per day, calling Refresh repeatedly is usually a waste of resources and is not recommended.\n\nApps may call Refresh services for a specific customer when there is a specific business case for the need of data that is up to date as of the moment. Please discuss with your account manager and systems engineer for further clarification.\n\nThe recommended timeout setting for this request is 120 seconds in order to receive a response. However, you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\nNote: This service is not available for all tiers of dynamic billing.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
+								"description": "Refresh account and transaction data for all accounts associated with the  given `customerId` with a connection to the institution.\n\nClient apps are not permitted to automate calls to the Refresh services. Active accounts are automatically refreshed by Finicity once per day. Because many financial institutions only post transactions once per day, calling Refresh services repeatedly is usually a waste of resources and is not recommended.\n\nApps may call Refresh services for a specific customer when there is a specific business case for the need of data that is up to date as of the moment. Please discuss with your account manager and systems engineer for further clarification.\n\nThe recommended timeout setting for this request is 120 seconds in order to receive a response. However, you can terminate the connection after making the call the operation will still complete. You will have to pull the account records to check for an updated aggregation attempt date to know when the refresh is complete.\n\nNote: This service is not available for all tiers of dynamic billing.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 							},
 							"response": [
 								{
@@ -6929,7 +6929,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/analytics/data/v1/{{obbFcraReportId}}/fcra?purpose=proident esse deserunt adipisicing",
+									"raw": "{{baseUrl}}/analytics/data/v1/{{obbFcraReportId}}/fcra?purpose=31",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -6943,7 +6943,7 @@
 									"query": [
 										{
 											"key": "purpose",
-											"value": "proident esse deserunt adipisicing",
+											"value": "31",
 											"description": "(Required) 2-digit code from [Permissible Purpose Codes](https://docs.finicity.com/permissible-purpose-codes/), specifying the reason for retrieving this report. Required for retrieving some reports."
 										}
 									]
@@ -6963,7 +6963,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/analytics/data/v1/:obb_report_id/fcra?purpose=proident esse deserunt adipisicing",
+											"raw": "{{baseUrl}}/analytics/data/v1/:obb_report_id/fcra?purpose=31",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -6977,7 +6977,7 @@
 											"query": [
 												{
 													"key": "purpose",
-													"value": "proident esse deserunt adipisicing"
+													"value": "31"
 												}
 											],
 											"variable": [
@@ -7013,7 +7013,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/analytics/data/v1/:obb_report_id/fcra?purpose=proident esse deserunt adipisicing",
+											"raw": "{{baseUrl}}/analytics/data/v1/:obb_report_id/fcra?purpose=31",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -7027,7 +7027,7 @@
 											"query": [
 												{
 													"key": "purpose",
-													"value": "proident esse deserunt adipisicing"
+													"value": "31"
 												}
 											],
 											"variable": [
@@ -9314,7 +9314,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/analytics/data/v1/{{obbFcraReportId}}/fcra?purpose=proident esse deserunt adipisicing",
+									"raw": "{{baseUrl}}/analytics/data/v1/{{obbFcraReportId}}/fcra?purpose=31",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -9328,7 +9328,7 @@
 									"query": [
 										{
 											"key": "purpose",
-											"value": "proident esse deserunt adipisicing",
+											"value": "31",
 											"description": "(Required) 2-digit code from [Permissible Purpose Codes](https://docs.finicity.com/permissible-purpose-codes/), specifying the reason for retrieving this report. Required for retrieving some reports."
 										}
 									]
@@ -9348,7 +9348,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/analytics/data/v1/:obb_report_id/fcra?purpose=proident esse deserunt adipisicing",
+											"raw": "{{baseUrl}}/analytics/data/v1/:obb_report_id/fcra?purpose=31",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -9362,7 +9362,7 @@
 											"query": [
 												{
 													"key": "purpose",
-													"value": "proident esse deserunt adipisicing"
+													"value": "31"
 												}
 											],
 											"variable": [
@@ -9398,7 +9398,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/analytics/data/v1/:obb_report_id/fcra?purpose=proident esse deserunt adipisicing",
+											"raw": "{{baseUrl}}/analytics/data/v1/:obb_report_id/fcra?purpose=31",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -9412,7 +9412,7 @@
 											"query": [
 												{
 													"key": "purpose",
-													"value": "proident esse deserunt adipisicing"
+													"value": "31"
 												}
 											],
 											"variable": [
@@ -15972,7 +15972,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/aggregation/v3/customers/{{customerId}}/accounts/{{accountId}}/owner",
+									"raw": "{{baseUrl}}/aggregation/v3/customers/{{customerId}}/accounts/{{accountId}}/owner?withInsights=true",
 									"host": [
 										"{{baseUrl}}"
 									],
@@ -15984,9 +15984,16 @@
 										"accounts",
 										"{{accountId}}",
 										"owner"
+									],
+									"query": [
+										{
+											"key": "withInsights",
+											"value": "true",
+											"description": "If this parameter is true, Identity Insights data will be returned along with the account owner information"
+										}
 									]
 								},
-								"description": "This service retrieves the account details for an account holder from an institution. The following data objects are available.\n* Account holders\n* Addresses\n* Emails\n* Phones\n* Documentations\n\nNote: the data returned varies from institution to institution as not all of them make the same data available.  This is a premium service, billable per each successful API call.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
+								"description": "This service retrieves the account details for an account holder from an institution. The following data objects are available.\n* Account holders\n* Addresses\n* Emails\n* Phones\n* Documentations\n* Identity Insights\n\nNote: the data returned varies from institution to institution as not all of them make the same data available. This is a premium service, billable per each successful API call.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 							},
 							"response": [
 								{
@@ -16001,7 +16008,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/aggregation/v3/customers/:customerId/accounts/:accountId/owner",
+											"raw": "{{baseUrl}}/aggregation/v3/customers/:customerId/accounts/:accountId/owner?withInsights=true",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -16013,6 +16020,12 @@
 												"accounts",
 												":accountId",
 												"owner"
+											],
+											"query": [
+												{
+													"key": "withInsights",
+													"value": "true"
+												}
 											],
 											"variable": [
 												{
@@ -16052,7 +16065,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/aggregation/v3/customers/:customerId/accounts/:accountId/owner",
+											"raw": "{{baseUrl}}/aggregation/v3/customers/:customerId/accounts/:accountId/owner?withInsights=true",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -16064,6 +16077,12 @@
 												"accounts",
 												":accountId",
 												"owner"
+											],
+											"query": [
+												{
+													"key": "withInsights",
+													"value": "true"
+												}
 											],
 											"variable": [
 												{
@@ -16103,7 +16122,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/aggregation/v3/customers/:customerId/accounts/:accountId/owner",
+											"raw": "{{baseUrl}}/aggregation/v3/customers/:customerId/accounts/:accountId/owner?withInsights=true",
 											"host": [
 												"{{baseUrl}}"
 											],
@@ -16115,6 +16134,12 @@
 												"accounts",
 												":accountId",
 												"owner"
+											],
+											"query": [
+												{
+													"key": "withInsights",
+													"value": "true"
+												}
 											],
 											"variable": [
 												{
@@ -18370,7 +18395,7 @@
 												{
 													"key": "consentReceiptId",
 													"value": "cr_dcfvygbhunjimk",
-													"description": "(Required) Third party access key receipt id"
+													"description": "(Required) Third party access key receipt ID"
 												}
 											]
 										}
@@ -18414,7 +18439,7 @@
 												{
 													"key": "consentReceiptId",
 													"value": "cr_dcfvygbhunjimk",
-													"description": "(Required) Third party access key receipt id"
+													"description": "(Required) Third party access key receipt ID"
 												}
 											]
 										}
@@ -18458,7 +18483,7 @@
 												{
 													"key": "consentReceiptId",
 													"value": "cr_dcfvygbhunjimk",
-													"description": "(Required) Third party access key receipt id"
+													"description": "(Required) Third party access key receipt ID"
 												}
 											]
 										}
@@ -18502,7 +18527,7 @@
 												{
 													"key": "consentReceiptId",
 													"value": "cr_dcfvygbhunjimk",
-													"description": "(Required) Third party access key receipt id"
+													"description": "(Required) Third party access key receipt ID"
 												}
 											]
 										}
@@ -18598,7 +18623,7 @@
 												{
 													"key": "consentReceiptId",
 													"value": "cr_dcfvygbhunjimk",
-													"description": "(Required) Third party access key receipt id"
+													"description": "(Required) Third party access key receipt ID"
 												}
 											]
 										}
@@ -18642,7 +18667,7 @@
 												{
 													"key": "consentReceiptId",
 													"value": "cr_dcfvygbhunjimk",
-													"description": "(Required) Third party access key receipt id"
+													"description": "(Required) Third party access key receipt ID"
 												}
 											]
 										}
@@ -18686,7 +18711,7 @@
 												{
 													"key": "consentReceiptId",
 													"value": "cr_dcfvygbhunjimk",
-													"description": "(Required) Third party access key receipt id"
+													"description": "(Required) Third party access key receipt ID"
 												}
 											]
 										}
@@ -18730,7 +18755,7 @@
 												{
 													"key": "consentReceiptId",
 													"value": "cr_dcfvygbhunjimk",
-													"description": "(Required) Third party access key receipt id"
+													"description": "(Required) Third party access key receipt ID"
 												}
 											]
 										}
@@ -23206,7 +23231,7 @@
 										}
 									]
 								},
-								"description": "Premium Service: A billable event when the API response is successful. \n\nMVS Implementation Options: Direct API Integration.\n\nUsed as a complementary report to the VOIE-Payroll report. This report is used to fulfill the pre-close VOE requirements. It retrieves the customer's employment details and employment status through the payroll source without any income information. \n\nTo generate this report, pass the values from the customer SSN, DOB, and the report ID from the first VOIE-Payroll report generated after the Connect session.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
+								"description": "Generate or refresh a VOE – Payroll report. Often used as a complementary report to the VOIE-Payroll report to fulfill the pre-close VOE requirements. It retrieves the customer's employment details and employment status through the payroll source without any income information.\n\nThis is a premium service. The billable event is the successful generation of a VOE - Payroll report.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 							},
 							"response": [
 								{
@@ -24518,7 +24543,7 @@
 							]
 						},
 						{
-							"name": "Refresh VOIE - Payroll Report",
+							"name": "Generate VOIE - Payroll Report",
 							"event": [
 								{
 									"listen": "test",
@@ -24586,7 +24611,7 @@
 										}
 									]
 								},
-								"description": "The VOIE – Payroll report generates when the customer completes Connect. Lenders, who commonly use this report for pre-close verification employment check, can refresh this report by passing the consumer's SSN, DOB, and the report ID from the first VOIE – Payroll report they received.\n\nWe'll refresh this report and update any new pay histories since the first report generated, including borrower's employment status as active or not.\n\nNote: lenders can only refresh this report one time in a 60-day period starting from the date of the first report. Any further report refreshes will incur additional charges.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
+								"description": "Generate or refresh a VOIE – Payroll report. For clients using the product via a consumer permissioning experience via Connect, the original VOIE – Payroll report generates when the consumer completes the Connect experience, and this API is only used for future report refreshes without reengaging the consumer.\n\nThis is a premium service. The billable event is the successful generation of a VOIE - Payroll report.\n\n_Supported regions_: ![🇺🇸](https://flagcdn.com/20x15/us.png)"
 							},
 							"response": [
 								{
