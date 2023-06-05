@@ -13,11 +13,20 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup (1)
+        uses: actions/checkout@v3
+        with:
+          repository: Mastercard/finicity-openapi
+      - name: Setup (2)
+        id: setup
+        run: |
+          customer_id=$(./bin/setup.sh ${{ secrets.PARTNER_ID }} ${{ secrets.PARTNER_SECRET }} ${{ secrets.APP_KEY }} --no-interaction | grep -oP '(?<=CUSTOMER_ID: )\d+')
+          echo "customer_id=$customer_id" >> $GITHUB_ENV
       - name: Checkout
         uses: actions/checkout@v3
       - name: Newman
         uses: matt-ball/newman-action@v1.0.4
         with:
-          envVar: '[{ "key": "appKey", "value": "${{ secrets.APP_KEY }}" }, { "key": "partnerId", "value": "${{ secrets.PARTNER_ID }}" }, { "key": "partnerSecret", "value": "${{ secrets.PARTNER_SECRET }}" }, { "key": "customerId", "value": "${{ secrets.CUSTOMER_ID }}" } ]'
+          envVar: '[{ "key": "appKey", "value": "${{ secrets.APP_KEY }}" }, { "key": "partnerId", "value": "${{ secrets.PARTNER_ID }}" }, { "key": "partnerSecret", "value": "${{ secrets.PARTNER_SECRET }}" }, { "key": "customerId", "value": "${{ env.customer_id }}" } ]'
           collection: finicity.postman_collection.json
           folder: '[ "All APIs" ]'

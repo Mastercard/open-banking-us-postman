@@ -49,7 +49,7 @@ The following workflow runs the collection and ensures it can be used to consume
 
 1. [Fork this repository](https://github.com/Mastercard/finicity-postman/fork)
 2. Go to _Settings_ > _Secrets_ > _Actions_
-3. Create new repository secrets: `PARTNER_ID`, `PARTNER_SECRET`, `APP_KEY` and `CUSTOMER_ID`
+3. Create new repository secrets: `PARTNER_ID`, `PARTNER_SECRET` and `APP_KEY`
 4. Enable workflows in the _Actions_ tab
 5. Click _Run workflow_ under _Newman_. Expected result: :heavy_check_mark:
 
