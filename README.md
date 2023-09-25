@@ -1,30 +1,30 @@
-# finicity-postman
-[![](https://raw.githubusercontent.com/Mastercard/finicity-openapi/main/res/logo.png)](https://www.finicity.com/#gh-light-mode-only)
-[![](https://raw.githubusercontent.com/Mastercard/finicity-openapi/main/res/logo-dark.png)](https://www.finicity.com/#gh-dark-mode-only)
+# open-banking-us-postman
+[![](https://raw.githubusercontent.com/Mastercard/open-banking-us-openapi/main/res/logo.png)](https://developer.mastercard.com/product/open-banking/#gh-light-mode-only)
+[![](https://raw.githubusercontent.com/Mastercard/open-banking-us-openapi/main/res/logo-dark.png)](https://developer.mastercard.com/product/open-banking/#gh-dark-mode-only)
 
 ## Overview
 
-The [Postman](https://www.postman.com/) collection for Finicity APIs (🇺🇸) tested using [Newman](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/) and the [Finicity Test Drive](https://signup.finicity.com/).
+The [Postman](https://www.postman.com/) collection for [Open Banking APIs](https://developer.mastercard.com/open-banking-us/documentation) (🇺🇸) tested using [Newman](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/) and the Test Drive plan.
 
 ## Workflows
 
-The following workflow runs the collection and ensures it can be used to consume and test the Finicity APIs:
+The following workflow runs the collection and ensures it can be used to consume and test the Open Banking APIs:
 
-[![](https://github.com/Mastercard/finicity-postman/actions/workflows/newman.yml/badge.svg)](https://github.com/Mastercard/finicity-postman/actions/workflows/newman.yml)
+[![](https://github.com/Mastercard/open-banking-us-postman/actions/workflows/newman.yml/badge.svg)](https://github.com/Mastercard/open-banking-us-postman/actions/workflows/newman.yml)
 
 ## Collection
-[JSON ⤓](./finicity.postman_collection.json)
+[JSON ⤓](./openbanking-us.postman_collection.json)
 
 ## Run the Collection
 ### Things to Know :point_down:
 
-* A [free Open Banking account](https://signup.finicity.com/) is required to obtain your **Partner ID**, **Partner Secret** and **App Key**:
+* A [free Mastercard Developers account](https://developer.mastercard.com/product/open-banking) is required to obtain your **Partner ID**, **Partner Secret** and **App Key**:
 
 ![project](https://user-images.githubusercontent.com/3964455/221236073-5661d083-0a04-4d46-9710-3c0c8c9e9a6a.gif)
 
-* Before running the collection, you need a **Customer ID**. For that, follow [Welcome Your First Customer](https://mstr.cd/3Z5de0Q) or run the [setup script](https://github.com/Mastercard/finicity-openapi/blob/main/bin/). This script will call:
+* Before running the collection, you need a **Customer ID**. For that, follow [Welcome Your First Customer](https://mstr.cd/3Z5de0Q) or run the [setup script](https://github.com/Mastercard/open-banking-us-openapi/blob/main/bin/). This script will call:
   * `addTestingCustomer`
-  * `generateConnectUrl` ([Finicity Connect](https://docs.finicity.com/)). Simply open the URL, search for "FinBank Profiles - A" and add to your test customer all accounts from [`profile_03`](https://docs.finicity.com/test-the-apis/#bank-account-profiles).
+  * `generateConnectUrl` ([Connect Application](https://developer.mastercard.com/open-banking-us/documentation/connect/)). Simply open the URL, search for "FinBank Profiles - A" and add to your test customer all accounts from [`profile_03`](https://developer.mastercard.com/open-banking-us/documentation/test-the-apis/#bank-account-profiles).
   * `refreshCustomerAccounts`
 
 <p align="center">
@@ -41,13 +41,13 @@ The following workflow runs the collection and ensures it can be used to consume
 ### Run the Collection on the Command Line
 
 1. Clone this repository
-2. Run `npx newman run finicity.postman_collection.json --env-var partnerId=*** --env-var partnerSecret=*** --env-var appKey=*** --env-var customerId=*** --folder 'All APIs'`
+2. Run `npx newman run openbanking-us.postman_collection.json --env-var partnerId=*** --env-var partnerSecret=*** --env-var appKey=*** --env-var customerId=*** --folder 'All APIs'`
 
 ![](https://user-images.githubusercontent.com/3964455/194878975-1b8f3051-68d5-478e-95cb-bd8b15d84379.gif)
 
 ### Run the Collection in GitHub
 
-1. [Fork this repository](https://github.com/Mastercard/finicity-postman/fork)
+1. [Fork this repository](https://github.com/Mastercard/open-banking-us-postman/fork)
 2. Go to _Settings_ > _Secrets_ > _Actions_
 3. Create new repository secrets: `PARTNER_ID`, `PARTNER_SECRET` and `APP_KEY`
 4. Enable workflows in the _Actions_ tab
@@ -56,8 +56,8 @@ The following workflow runs the collection and ensures it can be used to consume
 ## What's Next?
 
 * Postman allows you to generate [code snippets](https://learning.postman.com/docs/sending-requests/generate-code-snippets/) you can use into your application
-* You may also be interested in generating an API client from the [Finicity API specification](https://github.com/Mastercard/finicity-openapi)
+* You may also be interested in generating an API client from the [Open Banking API specification](https://github.com/Mastercard/open-banking-us-openapi)
 
 ## Guidelines
 
-The Finicity Postman Collection was created from the [Finicity API specification](https://github.com/Mastercard/finicity-openapi) and must be maintained accordingly.
+The Open Banking Postman Collection was created from the [Open Banking API specification](https://github.com/Mastercard/open-banking-us-openapi) and must be maintained accordingly.

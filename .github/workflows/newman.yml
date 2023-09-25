@@ -16,7 +16,7 @@ jobs:
       - name: Setup (1)
         uses: actions/checkout@v3
         with:
-          repository: Mastercard/finicity-openapi
+          repository: Mastercard/open-banking-us-openapi
       - name: Setup (2)
         id: setup
         run: |
@@ -28,5 +28,5 @@ jobs:
         uses: matt-ball/newman-action@v1.0.4
         with:
           envVar: '[{ "key": "appKey", "value": "${{ secrets.APP_KEY }}" }, { "key": "partnerId", "value": "${{ secrets.PARTNER_ID }}" }, { "key": "partnerSecret", "value": "${{ secrets.PARTNER_SECRET }}" }, { "key": "customerId", "value": "${{ env.customer_id }}" } ]'
-          collection: finicity.postman_collection.json
+          collection: openbanking-us.postman_collection.json
           folder: '[ "All APIs" ]'
