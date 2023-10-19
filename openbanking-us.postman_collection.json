@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "2dc2bfab-5949-4468-82de-8c4c7bbc140c",
-		"name": "Finicity APIs",
-		"description": "![](https://raw.githubusercontent.com/Mastercard/open-banking-us-openapi/main/res/logo.png)\n\nContact Support:\n Name: Finicity\n Email: business.development@finicity.com",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "f4fa01e4-ab2b-4129-ad60-5c325ff65e13",
+		"name": "🇺🇸 Mastercard Open Banking US APIs",
+		"description": "Postman Collection for Mastercard Open Banking APIs\n\n<img src=\"https://raw.githubusercontent.com/Mastercard/finicity-openapi/main/res/logo.png\">\n\nContact Support:  \nName: Finicity  \nEmail: [business.development@finicity.com](https://mailto:business.development@finicity.com)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20649604"
 	},
 	"item": [
 		{
