@@ -20,7 +20,7 @@ The following workflow runs the collection and ensures it can be used to consume
 
 * A [free Mastercard Developers account](https://developer.mastercard.com/product/open-banking) is required to obtain your **Partner ID**, **Partner Secret** and **App Key**:
 
-![project](https://user-images.githubusercontent.com/3964455/221236073-5661d083-0a04-4d46-9710-3c0c8c9e9a6a.gif)
+![project]([https://user-images.githubusercontent.com/3964455/221236073-5661d083-0a04-4d46-9710-3c0c8c9e9a6a.gif](https://github.com/Mastercard/open-banking-us-postman/assets/147383171/7a1033ef-c2d2-4a8a-8295-dedf12816413)) 
 
 * Before running the collection, you need a **Customer ID**. For that, follow [Welcome Your First Customer](https://mstr.cd/3Z5de0Q) or run the [setup script](https://github.com/Mastercard/open-banking-us-openapi/blob/main/bin/). This script will call:
   * `addTestingCustomer`
