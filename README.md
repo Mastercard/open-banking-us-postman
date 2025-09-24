@@ -1,10 +1,10 @@
 # open-banking-us-postman
-[![](https://raw.githubusercontent.com/Mastercard/open-banking-us-openapi/main/res/logo.png)](https://developer.mastercard.com/product/open-banking/#gh-light-mode-only)
-[![](https://raw.githubusercontent.com/Mastercard/open-banking-us-openapi/main/res/logo-dark.png)](https://developer.mastercard.com/product/open-banking/#gh-dark-mode-only)
+[![](https://raw.githubusercontent.com/Mastercard/open-banking-us-openapi/main/res/logo.png)](https://developer.mastercard.com/product/open-finance/#gh-light-mode-only)
+[![](https://raw.githubusercontent.com/Mastercard/open-banking-us-openapi/main/res/logo-dark.png)](https://developer.mastercard.com/product/open-finance/#gh-dark-mode-only)
 
 ## Overview
 
-The [Postman](https://www.postman.com/) collection for [Open Finance APIs](https://developer.mastercard.com/open-banking-us/documentation) (🇺🇸) tested using [Newman](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/) and the Test Drive plan.
+The [Postman](https://www.postman.com/) collection for [Open Finance APIs](https://developer.mastercard.com/open-finance-us/documentation) (🇺🇸) tested using [Newman](https://learning.postman.com/docs/running-collections/using-newman-cli/command-line-integration-with-newman/) and the Test Drive plan.
 
 ## Workflows
 
@@ -61,4 +61,5 @@ The following workflow runs the collection and ensures it can be used to consume
 ## Guidelines
 
 The Open Finanace Postman Collection was created from the [Open Finance API specification](https://github.com/Mastercard/open-banking-us-openapi) and must be maintained accordingly.
+
 
